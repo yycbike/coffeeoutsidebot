@@ -36,10 +36,8 @@ try:
 except IOError, err:
     print(err)
 
-print(locations)
-
 location = random.choice(locations)
-new_status = "The next #CoffeeOutside is at " + location
+new_status = "This week's #CoffeeOutside is at " + location + ", see you there!"
 print(new_status)
 
 # The Twitter Bits
