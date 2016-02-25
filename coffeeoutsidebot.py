@@ -37,7 +37,7 @@ except IOError, err:
     print(err)
 
 location = random.choice(locations)
-new_status = "This week's #CoffeeOutside is at " + location + ", see you there!"
+new_status = "This week's #CoffeeOutside is at " + location + ", see you there! #yycbike"
 print(new_status)
 
 # The Twitter Bits
