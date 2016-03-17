@@ -29,16 +29,37 @@ print(tcreds)
 
 locations = []
 try:
-    with open('./winter_locations', 'r') as file_handle:
+    with open('./summer_locations', 'r') as file_handle:
         for l in file_handle:
             if len(l.strip()) > 0:
                 locations.append(l.strip())
 except IOError, err:
     print(err)
 
-location = random.choice(locations)
+prior_locations = []
+try:
+    with open('./prior_locations', 'r') as file_handle:
+        for l in file_handle:
+            if len(l.strip()) > 0:
+                prior_locations.append(l.strip())
+except IOError, err:
+    print(err)
+
+while True:
+    location = random.choice(locations)
+    if location not in prior_locations[-5:]:
+        break
+
+print(prior_locations[-5:])
+
 new_status = "This week's #CoffeeOutside is at " + location + ", see you there! #yycbike"
 print(new_status)
+
+try:
+    with open('./prior_locations', 'a+') as file_handle:
+        file_handle.write(location + "\n")
+except IOError, err:
+    print(err)
 
 # The Twitter Bits
 t = Twitter(
