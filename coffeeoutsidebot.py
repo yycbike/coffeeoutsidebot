@@ -52,7 +52,7 @@ while True:
 
 print(prior_locations[-5:])
 
-new_status = "This week's #CoffeeOutside is at " + location + ", see you there! #yycbike"
+new_status = "This week's #CoffeeOutside - " + location + ", see you there! #yycbike"
 print(new_status)
 
 try:
