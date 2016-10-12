@@ -28,7 +28,7 @@ def retrieve_twitter_config(config_file='./cb_config.ini'):
 def retrieve_all_locations_list():
     locations = []
     try:
-        with open('./summer_locations', 'r') as file_handle:
+        with open('./winter_locations', 'r') as file_handle:
             for l in file_handle:
                 if len(l.strip()) > 0:
                     locations.append(l.strip())
