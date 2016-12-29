@@ -7,6 +7,7 @@
 # TODO - automate weather forecast lookup
 # TODO - automate Cyclepalooza event creation
 
+import os
 import json
 import random
 from twitter import *
@@ -69,10 +70,19 @@ def main():
     locations = retrieve_all_locations_list()
     prior_locations = retrieve_prior_locations_list()
 
-    while True:
-        location = random.choice(locations)
-        if location not in prior_locations[-5:]:
-            break
+    # TODO - clean this up a bit, a bit racy, and
+    if os.path.isfile('./override'):
+        try:
+            with open('./override', 'r') as file_handle:
+                location = file_handle.readline(),strip()
+        except IOError, err:
+            print(err)
+        os.unlink('./override')
+    else:
+        while True:
+            location = random.choice(locations)
+            if location not in prior_locations[-5:]:
+                break
 
     notify_twitter(location)
     add_location_to_prior_locations(location)
