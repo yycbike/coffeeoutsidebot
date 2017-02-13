@@ -29,13 +29,11 @@ def retrieve_twitter_config(config_file='./cb_config.ini'):
 def retrieve_all_locations_list():
     locations = []
     try:
-        with open('./winter_locations', 'r') as file_handle:
-            for l in file_handle:
-                if len(l.strip()) > 0:
-                    locations.append(l.strip())
+        with open('./locations.json', 'r') as fp:
+            locations = json.load(fp)
     except IOError, err:
         print(err)
-    return locations
+    return locations["locations"]
 
 def retrieve_prior_locations_list():
     prior_locations = []
@@ -49,28 +47,63 @@ def retrieve_prior_locations_list():
     return prior_locations
 
 def add_location_to_prior_locations(location):
-    try:
-        with open('./prior_locations', 'a+') as file_handle:
-            file_handle.write(location + "\n")
-    except IOError, err:
-        print(err)
+    if dryrun():
+        print("Not adding to prior locations")
+    else:
+        try:
+            with open('./prior_locations', 'a+') as file_handle:
+                file_handle.write(location["name"] + "\n")
+        except IOError, err:
+            print(err)
 
 def notify_twitter(location):
     # TODO assert length of string is not greater than 140 chars
-    new_status = "This week's #CoffeeOutside - " + location + ", see you there! #yycbike"
+    new_status = "This week's #CoffeeOutside - "
+    new_status += location["name"]
+    if 'url' in location:
+        new_status += " " + location["url"]
+    if 'address' in location:
+        new_status += " (" + location["address"] + ")"
+    new_status += ", see you there! #yycbike"
     print("Twitter:" + new_status)
 
     tcreds = retrieve_twitter_config()
 
-    t = Twitter(
+    if not dryrun():
+        t = Twitter(
         auth=OAuth(tcreds['token'], tcreds['token_secret'], tcreds['consumer_key'], tcreds['consumer_secret']))
-    t.statuses.update(status=new_status)
+        t.statuses.update(status=new_status)
+
+def select_location(locations):
+    prior_locations = retrieve_prior_locations_list()
+    temperature = -5 #STUB
+
+    # TODO: 'rainy-day' locations limiting
+    valid_locations = []
+    for l in locations:
+        if l["name"] in prior_locations[-5:]:
+            continue
+        if 'low_limit' in l:
+            if temperature < l['low_limit']:
+                continue
+        if 'high_limit' in l:
+            if temperature > l['high_limit']:
+                continue
+        valid_locations.append(l)
+
+    # for l in valid_locations:
+    #     print(l["name"])
+    # print("\n")
+
+    return random.choice(valid_locations)
+
+def dryrun():
+    return os.getenv('DRY_RUN') != None
 
 def main():
     locations = retrieve_all_locations_list()
-    prior_locations = retrieve_prior_locations_list()
 
-    # TODO - clean this up a bit, a bit racy, and
+    # TODO - clean this up a bit, a bit racy
     if os.path.isfile('./override'):
         try:
             with open('./override', 'r') as file_handle:
@@ -79,10 +112,7 @@ def main():
             print(err)
         os.unlink('./override')
     else:
-        while True:
-            location = random.choice(locations)
-            if location not in prior_locations[-5:]:
-                break
+        location = select_location(locations)
 
     notify_twitter(location)
     add_location_to_prior_locations(location)
