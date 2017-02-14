@@ -24,6 +24,10 @@
 		"url": "http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Barb-Scott-Park.aspx",
 		"low_limit": -15
 	}, {
+		"name": "Buckmaster Park",
+		"address": "1629 21 Ave SW",
+		"low_limit": 15
+	}, {
 		"name": "Central Memorial Park",
 		"url": "http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Central-Memorial-Park.aspx",
 		"low_limit": -15
