@@ -44,6 +44,10 @@
 		"url": "http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Princes-Island-Park.aspx",
 		"low_limit": -10
 	}, {
+		"name": "Gerry Shaw Gardens",
+		"address": "Elbow Drive & 30th Ave SW",
+		"low_limit": 20
+	}, {
 		"name": "Harley Hotchkiss Gardens",
 		"address": "611 4 St SW",
 		"low_limit": -5
