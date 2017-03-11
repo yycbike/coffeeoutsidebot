@@ -74,9 +74,12 @@ def notify_twitter(location):
         auth=OAuth(tcreds['token'], tcreds['token_secret'], tcreds['consumer_key'], tcreds['consumer_secret']))
         t.statuses.update(status=new_status)
 
+def get_forecast_temperature():
+    return -5 # STUB
+
 def select_location(locations):
     prior_locations = retrieve_prior_locations_list()
-    temperature = -5 #STUB
+    temperature = get_forecast_temperature()
 
     # TODO: 'rainy-day' locations limiting
     valid_locations = []
