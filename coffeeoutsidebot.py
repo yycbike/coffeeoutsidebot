@@ -101,6 +101,7 @@ def select_location(locations):
     return random.choice(valid_locations)
 
 def dryrun():
+    print("DRY RUN MODE")
     return os.getenv('DRY_RUN') != None
 
 def main():
