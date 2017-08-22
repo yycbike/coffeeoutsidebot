@@ -1,10 +1,8 @@
 #!/usr/bin/env python
 # CoffeeOutsideBot
-# Copyright 2016, David Crosby
+# Copyright 2016-2017, David Crosby
 # BSD 2-clause license
 #
-# TODO - add rest of the locations, etc
-# TODO - automate weather forecast lookup
 # TODO - automate Cyclepalooza event creation
 
 import os
@@ -12,7 +10,9 @@ import json
 import random
 from twitter import *
 from ConfigParser import SafeConfigParser
+import openweathermapy.core as owm
 
+# TODO clean up config file parsing
 def retrieve_twitter_config(config_file='./cb_config.ini'):
     parser = SafeConfigParser()
     parser.read(config_file)
@@ -25,6 +25,19 @@ def retrieve_twitter_config(config_file='./cb_config.ini'):
                 for option in parser.options('twitter'):
                     tcreds[option] = parser.get('twitter', option)
     return tcreds
+
+def retrieve_owm_config(config_file='./cb_config.ini'):
+    parser = SafeConfigParser()
+    parser.read(config_file)
+
+    owm_creds = {}
+    # yuck
+    for section in ['openweathermap']:
+        if parser.has_section(section):
+            if section == 'openweathermap':
+                for option in parser.options('openweathermap'):
+                    owm_creds[option] = parser.get('openweathermap', option)
+    return owm_creds
 
 def retrieve_all_locations_list():
     locations = []
@@ -44,7 +57,7 @@ def retrieve_prior_locations_list():
                     prior_locations.append(l.strip())
     except IOError, err:
         print(err)
-    return prior_locations
+    return prior_locations[-8:]
 
 def add_location_to_prior_locations(location):
     if dryrun():
@@ -75,16 +88,26 @@ def notify_twitter(location):
         t.statuses.update(status=new_status)
 
 def get_forecast_temperature():
-    return -5 # STUB
+    # Use Celsius
+    owm_creds = retrieve_owm_config()
+    # TODO remove hardcode for Calgary city id
+    data = owm.get_forecast_daily(5913490, 3, **owm_creds)
+    print(data[2])
+    return data[2]['temp']['morn']
 
 def select_location(locations):
     prior_locations = retrieve_prior_locations_list()
+    print(prior_locations)
     temperature = get_forecast_temperature()
+
+    print("Temperature:" + str(temperature))
 
     # TODO: 'rainy-day' locations limiting
     valid_locations = []
     for l in locations:
-        if l["name"] in prior_locations[-6:]:
+        if l["name"] in prior_locations:
+            if dryrun:
+                print("Skipping" + l["name"])
             continue
         if 'low_limit' in l:
             if temperature < l['low_limit']:
@@ -94,9 +117,10 @@ def select_location(locations):
                 continue
         valid_locations.append(l)
 
-    # for l in valid_locations:
-    #     print(l["name"])
-    # print("\n")
+    if dryrun():
+        for l in valid_locations:
+            print(l["name"])
+        print("\n")
 
     return random.choice(valid_locations)
 
@@ -108,6 +132,7 @@ def main():
     locations = retrieve_all_locations_list()
 
     # TODO - clean this up a bit, a bit racy
+    # TODO - override functionality is broken!
     if os.path.isfile('./override'):
         try:
             with open('./override', 'r') as file_handle:
