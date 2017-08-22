@@ -1,0 +1,8 @@
+[twitter]
+consumer_secret = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+consumer_key = xxxxxxxxxxxxxxxxxxxxxxxxx
+token = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+token_secret = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[openweathermap]
+appid = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+units = metric
