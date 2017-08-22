@@ -84,7 +84,7 @@ def select_location(locations):
     # TODO: 'rainy-day' locations limiting
     valid_locations = []
     for l in locations:
-        if l["name"] in prior_locations[-5:]:
+        if l["name"] in prior_locations[-6:]:
             continue
         if 'low_limit' in l:
             if temperature < l['low_limit']:
