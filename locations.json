@@ -1,136 +1,175 @@
 {
-	"locations": [{
-		"name": "@LaBoulangerie4",
-		"address": "2435 4 St SW",
-		"high_limit": 20
-	}, {
-		"name": "@SidewalkSimmons bakery",
-		"url": "http://sidewalkcitizenbakery.com/eastvillage/",
-		"high_limit": 20
-	}, {
-		"name": "@alfornobakery",
-		"url": "http://alforno.ca/",
-		"high_limit": 20
-	}, {
-		"name": "@bumpyscafe",
-		"address": "1040 8th St SW",
-		"high_limit": 20
-	}, {
-		"name": "@HolyGrill",
-		"address": "200-444 5th Ave SW",
-		"high_limit": 20
-	}, {
-		"name": "Barb Scott Park",
-		"url": "http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Barb-Scott-Park.aspx",
-		"low_limit": -15
-	}, {
-		"name": "Buckmaster Park",
-		"address": "1629 21 Ave SW",
-		"low_limit": 15
-	}, {
-		"name": "Central Memorial Park",
-		"url": "http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Central-Memorial-Park.aspx",
-		"low_limit": -15
-	}, {
-		"name": "Century Gardens",
-		"url": "http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Century-Gardens.aspx",
-		"low_limit": -15
-	}, {
-		"name": "Connaught Park",
-		"url": "http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Connaught-Park.aspx",
-		"low_limit": -15
-	}, {
-		"name": "Enmax Stage on Prince's Island",
-		"url": "http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Princes-Island-Park.aspx",
-		"low_limit": -10
-	}, {
-		"name": "Gerry Shaw Gardens",
-		"address": "Elbow Drive & 30th Ave SW",
-		"low_limit": 20
-	}, {
-		"name": "Harley Hotchkiss Gardens",
-		"address": "611 4 St SW",
-		"low_limit": -5
-	}, {
-		"name": "Harvie Passage (Weir)",
-		"url": "https://www.google.ca/maps/place/Harvie+Passage,+Calgary,+AB/@51.0439438,-114.0137959,15z/data=!4m2!3m1!1s0x53717ac80a6f6a1b:0xe7a331ec29495195",
-		"low_limit": 0
-	}, {
-		"name": "Haultain Park",
-		"url": "http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Haultain-Park.aspx",
-		"low_limit": -15
-	}, {
-		"name": "Ice Rink at Olympic Plaza",
-		"url": "http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Olympic-Plaza.aspx",
-		"low_limit": -15,
-		"high_limit": 2
-	}, {
-		"name": "James Short Park",
-		"url": "http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/James-Short-Park.aspx",
-		"low_limit": -5
-	}, {
-		"name": "Lougheed House Beaulieu Gardens",
-		"url": "http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Beaulieu-Gardens.aspx",
-		"low_limit": -5
-	}, {
-		"name": "Olympic Plaza",
-		"url": "http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Olympic-Plaza.aspx",
-		"low_limit": 10
-	}, {
-		"name": "Patrick Burns Rock Garden at Riley Park",
-		"url": "http://calgary.ca/CSPS/Parks/Pages/Locations/NW-parks/Riley-Park.aspx",
-		"low_limit": 0
-	}, {
-		"name": "Peace Park",
-		"url": "http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Peace-Park.aspx",
-		"low_limit": 0
-	}, {
-		"name": "Pumphouse Park",
-		"url": "http://www.calgaryplus.ca/calgary/venues/pumphouse-park",
-		"low_limit": 0
-	}, {
-		"name": "Reader Rock Garden",
-		"url": "http://www.calgary.ca/CSPS/Parks/Pages/Locations/SE-parks/Reader-Rock-Garden.aspx",
-		"low_limit": 15
-	}, {
-		"name": "Rotary Park",
-		"url": "http://www.calgary.ca/CSPS/Parks/Pages/Locations/NE-parks/Rotary-Park.aspx",
-		"low_limit": 10
-	}, {
-		"name": "Rundle Ruins",
-		"address": "632 13 Avenue SE",
-		"low_limit": 0
-	}, {
-		"name": "Sandy Beach",
-		"url": "http://www.calgary.ca/CSPS/Parks/Pages/Locations/SW-parks/Sandy-Beach.aspx",
-		"low_limit": 0
-	}, {
-		"name": "Shaw Millenium Park",
-		"url": "http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Shaw-Millennium-Park.aspx",
-		"low_limit": 0
-	}, {
-		"name": "Sien Lok Park",
-		"url": "http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Sien-Lok-Park.aspx",
-		"low_limit": 0
-	}, {
-		"name": "Stanley Park Flower Garden",
-		"url": "http://www.calgary.ca/CSPS/Parks/Pages/Locations/SW-parks/Stanley-Park.aspx",
-		"low_limit": 15
-	}, {
-		"name": "The Rise on St. Patrick's Island",
-		"url": "http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/St.-Patrick's-Island-Park.aspx",
-		"low_limit": 0
-	}, {
-		"name": "The Roasterie",
-		"address": "314 10th St NW",
-		"high_limit": 15
-	}, {
-		"name": "Tom Campbell's Hill",
-		"url": "http://www.calgary.ca/CSPS/Parks/Pages/Locations/NE-parks/Tom-Campbells-Hill.aspx",
-		"low_limit": 0
-	}, {
-		"name": "West Side of McDougall Centre",
-		"url": "https://www.google.ca/maps/place/McDougall+Centre,+Calgary,+AB+T2P/@51.049273,-114.0773586,17z/data=!4m2!3m1!1s0x53716fe4fd339a6f:0x6a0dd3ff806e1e98",
-		"low_limit": -10
-	}]
+   "locations" : [
+      {
+         "name" : "@LaBoulangerie4",
+         "address" : "2435 4 St SW",
+         "high_limit" : 15
+      },
+      {
+         "high_limit" : 20,
+         "name" : "@SidewalkSimmons bakery",
+         "url" : "http://sidewalkcitizenbakery.com/eastvillage/"
+      },
+      {
+         "url" : "http://alforno.ca/",
+         "name" : "@alfornobakery",
+         "high_limit" : 15
+      },
+      {
+         "high_limit" : 10,
+         "address" : "1040 8th St SW",
+         "name" : "@bumpyscafe"
+      },
+      {
+         "address" : "200-444 5th Ave SW",
+         "high_limit" : 10,
+         "name" : "@HolyGrill"
+      },
+      {
+         "name" : "Barb Scott Park",
+         "url" : "http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Barb-Scott-Park.aspx",
+         "low_limit" : -15
+      },
+      {
+         "name" : "Buckmaster Park",
+         "low_limit" : 15,
+         "address" : "1629 21 Ave SW"
+      },
+      {
+         "name" : "Central Memorial Park",
+         "low_limit" : -15,
+         "url" : "http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Central-Memorial-Park.aspx"
+      },
+      {
+         "name" : "Century Gardens",
+         "low_limit" : -15,
+         "url" : "http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Century-Gardens.aspx"
+      },
+      {
+         "url" : "http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Connaught-Park.aspx",
+         "low_limit" : -15,
+         "name" : "Connaught Park"
+      },
+      {
+         "name" : "Enmax Stage on Prince's Island",
+         "url" : "http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Princes-Island-Park.aspx",
+         "low_limit" : -10
+      },
+      {
+         "low_limit" : 15,
+         "name" : "Gerry Shaw Gardens",
+         "address" : "Elbow Drive & 30th Ave SW"
+      },
+      {
+         "low_limit" : -5,
+         "name" : "Harley Hotchkiss Gardens",
+         "address" : "611 4 St SW"
+      },
+      {
+         "name" : "Harvie Passage (Weir)",
+         "low_limit" : 0,
+         "url" : "https://www.google.ca/maps/place/Harvie+Passage,+Calgary,+AB/@51.0439438,-114.0137959,15z/data=!4m2!3m1!1s0x53717ac80a6f6a1b:0xe7a331ec29495195"
+      },
+      {
+         "name" : "Haultain Park",
+         "low_limit" : -15,
+         "url" : "http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Haultain-Park.aspx"
+      },
+      {
+         "high_limit" : 2,
+         "name" : "Ice Rink at Olympic Plaza",
+         "url" : "http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Olympic-Plaza.aspx",
+         "low_limit" : -15
+      },
+      {
+         "name" : "James Short Park",
+         "low_limit" : -5,
+         "url" : "http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/James-Short-Park.aspx"
+      },
+      {
+         "name" : "Lougheed House Beaulieu Gardens",
+         "low_limit" : -5,
+         "url" : "http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Beaulieu-Gardens.aspx"
+      },
+      {
+         "low_limit" : 10,
+         "url" : "http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Olympic-Plaza.aspx",
+         "name" : "Olympic Plaza"
+      },
+      {
+         "url" : "http://calgary.ca/CSPS/Parks/Pages/Locations/NW-parks/Riley-Park.aspx",
+         "low_limit" : 0,
+         "name" : "Patrick Burns Rock Garden at Riley Park"
+      },
+      {
+         "name" : "Peace Park",
+         "low_limit" : 0,
+         "url" : "http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Peace-Park.aspx"
+      },
+      {
+         "low_limit" : 0,
+         "url" : "http://www.calgaryplus.ca/calgary/venues/pumphouse-park",
+         "name" : "Pumphouse Park"
+      },
+      {
+         "name" : "Reader Rock Garden",
+         "low_limit" : 15,
+         "url" : "http://www.calgary.ca/CSPS/Parks/Pages/Locations/SE-parks/Reader-Rock-Garden.aspx"
+      },
+      {
+         "low_limit" : 10,
+         "url" : "http://www.calgary.ca/CSPS/Parks/Pages/Locations/NE-parks/Rotary-Park.aspx",
+         "name" : "Rotary Park"
+      },
+      {
+         "address" : "632 13 Avenue SE",
+         "name" : "Rundle Ruins",
+         "low_limit" : 0
+      },
+      {
+         "low_limit" : 0,
+         "url" : "http://www.calgary.ca/CSPS/Parks/Pages/Locations/SW-parks/Sandy-Beach.aspx",
+         "name" : "Sandy Beach"
+      },
+      {
+         "url" : "http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Shaw-Millennium-Park.aspx",
+         "low_limit" : 0,
+         "name" : "Shaw Millenium Park"
+      },
+      {
+         "url" : "http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Sien-Lok-Park.aspx",
+         "low_limit" : 0,
+         "name" : "Sien Lok Park"
+      },
+      {
+         "low_limit" : 15,
+         "url" : "http://www.calgary.ca/CSPS/Parks/Pages/Locations/SW-parks/Stanley-Park.aspx",
+         "name" : "Stanley Park Flower Garden"
+      },
+      {
+         "name" : "The Rise on St. Patrick's Island",
+         "url" : "http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/St.-Patrick's-Island-Park.aspx",
+         "low_limit" : 0
+      },
+      {
+         "name" : "The Roasterie",
+         "high_limit" : 15,
+         "address" : "314 10th St NW"
+      },
+      {
+         "name" : "Thompson Family Park",
+         "url" : "http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Thomson-Family-Park.aspx",
+         "low_limit" : 0
+      },
+      {
+         "name" : "Tom Campbell's Hill",
+         "url" : "http://www.calgary.ca/CSPS/Parks/Pages/Locations/NE-parks/Tom-Campbells-Hill.aspx",
+         "low_limit" : 0
+      },
+      {
+         "low_limit" : -10,
+         "url" : "https://www.google.ca/maps/place/McDougall+Centre,+Calgary,+AB+T2P/@51.049273,-114.0773586,17z/data=!4m2!3m1!1s0x53716fe4fd339a6f:0x6a0dd3ff806e1e98",
+         "name" : "West Side of McDougall Centre"
+      }
+   ]
 }
