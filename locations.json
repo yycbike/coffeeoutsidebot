@@ -3,26 +3,26 @@
       {
          "name" : "@LaBoulangerie4",
          "address" : "2435 4 St SW",
-         "high_limit" : 15
+         "high_limit" : 5
       },
       {
-         "high_limit" : 20,
+         "high_limit" : 10,
          "name" : "@SidewalkSimmons bakery",
          "url" : "http://sidewalkcitizenbakery.com/eastvillage/"
       },
       {
          "url" : "http://alforno.ca/",
          "name" : "@alfornobakery",
-         "high_limit" : 15
+         "high_limit" : 5
       },
       {
-         "high_limit" : 10,
+         "high_limit" : 0,
          "address" : "1040 8th St SW",
          "name" : "@bumpyscafe"
       },
       {
          "address" : "200-444 5th Ave SW",
-         "high_limit" : 10,
+         "high_limit" : 0,
          "name" : "@HolyGrill"
       },
       {
@@ -76,7 +76,7 @@
          "url" : "http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Haultain-Park.aspx"
       },
       {
-         "high_limit" : 2,
+         "high_limit" : -2,
          "name" : "Ice Rink at Olympic Plaza",
          "url" : "http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Olympic-Plaza.aspx",
          "low_limit" : -15
@@ -153,7 +153,7 @@
       },
       {
          "name" : "The Roasterie",
-         "high_limit" : 15,
+         "high_limit" : 5,
          "address" : "314 10th St NW"
       },
       {
