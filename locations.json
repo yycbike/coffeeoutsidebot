@@ -7,7 +7,7 @@
       },
       {
          "high_limit" : 10,
-         "name" : "@SidewalkSimmons bakery",
+         "name" : "@SidewalkSimmons",
          "url" : "http://sidewalkcitizenbakery.com/eastvillage/"
       },
       {
@@ -157,7 +157,7 @@
          "address" : "314 10th St NW"
       },
       {
-         "name" : "Thompson Family Park",
+         "name" : "Thomson Family Park",
          "url" : "http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Thomson-Family-Park.aspx",
          "low_limit" : 0
       },
