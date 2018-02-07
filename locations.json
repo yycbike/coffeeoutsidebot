@@ -26,6 +26,11 @@
          "name" : "@HolyGrill"
       },
       {
+         "address" : "1325 1 St SE",
+         "high_limit" : 0,
+         "name" : "@ReworksYYC"
+      },
+      {
          "name" : "Barb Scott Park",
          "url" : "http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Barb-Scott-Park.aspx",
          "low_limit" : -15
