@@ -46,11 +46,6 @@
          "url" : "http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Central-Memorial-Park.aspx"
       },
       {
-         "name" : "Century Gardens",
-         "low_limit" : -15,
-         "url" : "http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Century-Gardens.aspx"
-      },
-      {
          "url" : "http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Connaught-Park.aspx",
          "low_limit" : -15,
          "name" : "Connaught Park"
