@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # CoffeeOutsideBot
-# Copyright 2016-2017, David Crosby
+# Copyright 2016-2018, David Crosby
 # BSD 2-clause license
 #
 # TODO - automate Cyclepalooza event creation
