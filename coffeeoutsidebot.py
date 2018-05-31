@@ -10,7 +10,7 @@ import json
 import random
 from twitter import *
 from ConfigParser import SafeConfigParser
-import openweathermapy.core as owm
+from weather import Forecast
 
 # TODO clean up config file parsing
 def retrieve_twitter_config(config_file='./cb_config.ini'):
@@ -25,19 +25,6 @@ def retrieve_twitter_config(config_file='./cb_config.ini'):
                 for option in parser.options('twitter'):
                     tcreds[option] = parser.get('twitter', option)
     return tcreds
-
-def retrieve_owm_config(config_file='./cb_config.ini'):
-    parser = SafeConfigParser()
-    parser.read(config_file)
-
-    owm_creds = {}
-    # yuck
-    for section in ['openweathermap']:
-        if parser.has_section(section):
-            if section == 'openweathermap':
-                for option in parser.options('openweathermap'):
-                    owm_creds[option] = parser.get('openweathermap', option)
-    return owm_creds
 
 def retrieve_all_locations_list():
     locations = []
@@ -87,18 +74,11 @@ def notify_twitter(location):
         auth=OAuth(tcreds['token'], tcreds['token_secret'], tcreds['consumer_key'], tcreds['consumer_secret']))
         t.statuses.update(status=new_status)
 
-def get_forecast_temperature():
-    # Use Celsius
-    owm_creds = retrieve_owm_config()
-    # TODO remove hardcode for Calgary city id
-    data = owm.get_forecast_daily(5913490, 3, **owm_creds)
-    print(data[2])
-    return data[2]['temp']['morn']
-
 def select_location(locations):
     prior_locations = retrieve_prior_locations_list()
     print(prior_locations)
-    temperature = get_forecast_temperature()
+    forecast = Forecast()
+    temperature = forecast.temperature()
 
     print("Temperature:" + str(temperature))
 
