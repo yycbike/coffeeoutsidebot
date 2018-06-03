@@ -69,7 +69,9 @@ class LocationChooser():
             print(err)
 
 if __name__ == '__main__':
+    import pprint
     logging.basicConfig(level=logging.DEBUG)
     ee = LocationChooser()
     print("Chosen location", ee.select_location())
-    print("Valid locations", ee.valid_locations)
+    pp = pprint.PrettyPrinter(indent=2)
+    pp.pprint(ee.valid_locations)
