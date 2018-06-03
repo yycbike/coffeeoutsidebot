@@ -3,32 +3,38 @@
       {
          "name" : "@LaBoulangerie4",
          "address" : "2435 4 St SW",
-         "high_limit" : 5
+         "high_limit" : 5,
+         "rainy_day": true
       },
       {
          "high_limit" : 10,
          "name" : "@SidewalkSimmons",
-         "url" : "http://sidewalkcitizenbakery.com/eastvillage/"
+         "url" : "http://sidewalkcitizenbakery.com/eastvillage/",
+         "rainy_day": true
       },
       {
          "url" : "http://alforno.ca/",
          "name" : "@alfornobakery",
-         "high_limit" : 5
+         "high_limit" : 5,
+         "rainy_day": true
       },
       {
          "high_limit" : 0,
          "address" : "1040 8th St SW",
-         "name" : "@bumpyscafe"
+         "name" : "@bumpyscafe",
+         "rainy_day": true
       },
       {
          "address" : "200-444 5th Ave SW",
          "high_limit" : 0,
-         "name" : "@HolyGrill"
+         "name" : "@HolyGrill",
+         "rainy_day": true
       },
       {
          "address" : "1325 1 St SE",
          "high_limit" : 0,
-         "name" : "@ReworksYYC"
+         "name" : "@ReworksYYC",
+         "rainy_day": true
       },
       {
          "name" : "Barb Scott Park",
@@ -48,12 +54,14 @@
       {
          "url" : "http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Connaught-Park.aspx",
          "low_limit" : -15,
-         "name" : "Connaught Park"
+         "name" : "Connaught Park",
+         "rainy_day": true
       },
       {
          "name" : "Enmax Stage on Prince's Island",
          "url" : "http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Princes-Island-Park.aspx",
-         "low_limit" : -10
+         "low_limit" : -10,
+         "rainy_day": true
       },
       {
          "low_limit" : 15,
@@ -154,12 +162,14 @@
       {
          "name" : "The Roasterie",
          "high_limit" : 5,
-         "address" : "314 10th St NW"
+         "address" : "314 10th St NW",
+         "rainy_day": true
       },
       {
          "name" : "Thomson Family Park",
          "url" : "http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Thomson-Family-Park.aspx",
-         "low_limit" : 0
+         "low_limit" : 0,
+         "rainy_day": true
       },
       {
          "name" : "Tom Campbell's Hill",

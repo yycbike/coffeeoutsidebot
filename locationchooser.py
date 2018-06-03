@@ -31,8 +31,8 @@ class LocationChooser():
     def select_location(self):
         forecast = Forecast()
         temperature = forecast.temperature()
+        humidity = forecast.humidity()
 
-        # TODO: 'rainy-day' locations limiting
         self.valid_locations = []
         for l in self.locations:
             if l["name"] in self.prior_locations:
@@ -43,6 +43,12 @@ class LocationChooser():
                     continue
             if 'high_limit' in l:
                 if temperature > l['high_limit']:
+                    continue
+            if humidity > 75:
+                if 'rainy_day' in l:
+                    if not l['rainy_day'] == True:
+                        continue
+                else:
                     continue
             self.valid_locations.append(l)
 
