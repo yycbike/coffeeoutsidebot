@@ -7,10 +7,11 @@
 
 import os
 import json
-import random
+import logging
 from twitter import *
 from ConfigParser import SafeConfigParser
 from weather import Forecast
+from locationchooser import LocationChooser
 
 # TODO clean up config file parsing
 def retrieve_twitter_config(config_file='./cb_config.ini'):
@@ -25,36 +26,6 @@ def retrieve_twitter_config(config_file='./cb_config.ini'):
                 for option in parser.options('twitter'):
                     tcreds[option] = parser.get('twitter', option)
     return tcreds
-
-def retrieve_all_locations_list():
-    locations = []
-    try:
-        with open('./locations.json', 'r') as fp:
-            locations = json.load(fp)
-    except IOError, err:
-        print(err)
-    return locations["locations"]
-
-def retrieve_prior_locations_list():
-    prior_locations = []
-    try:
-        with open('./prior_locations', 'r') as file_handle:
-            for l in file_handle:
-                if len(l.strip()) > 0:
-                    prior_locations.append(l.strip())
-    except IOError, err:
-        print(err)
-    return prior_locations[-8:]
-
-def add_location_to_prior_locations(location):
-    if dryrun():
-        print("Not adding to prior locations")
-    else:
-        try:
-            with open('./prior_locations', 'a+') as file_handle:
-                file_handle.write(location["name"] + "\n")
-        except IOError, err:
-            print(err)
 
 def notify_twitter(location):
     # TODO assert length of string is not greater than 140 chars
@@ -74,57 +45,30 @@ def notify_twitter(location):
         auth=OAuth(tcreds['token'], tcreds['token_secret'], tcreds['consumer_key'], tcreds['consumer_secret']))
         t.statuses.update(status=new_status)
 
-def select_location(locations):
-    prior_locations = retrieve_prior_locations_list()
-    print(prior_locations)
-    forecast = Forecast()
-    temperature = forecast.temperature()
-
-    print("Temperature:" + str(temperature))
-
-    # TODO: 'rainy-day' locations limiting
-    valid_locations = []
-    for l in locations:
-        if l["name"] in prior_locations:
-            if dryrun:
-                print("Skipping" + l["name"])
-            continue
-        if 'low_limit' in l:
-            if temperature < l['low_limit']:
-                continue
-        if 'high_limit' in l:
-            if temperature > l['high_limit']:
-                continue
-        valid_locations.append(l)
-
-    if dryrun():
-        for l in valid_locations:
-            print(l["name"])
-        print("\n")
-
-    return random.choice(valid_locations)
-
 def dryrun():
     print("DRY RUN MODE")
     return os.getenv('DRY_RUN') != None
 
 def main():
-    locations = retrieve_all_locations_list()
-
     # TODO - clean this up a bit, a bit racy
     # TODO - override functionality is broken!
-    if os.path.isfile('./override'):
+
+    magic8ball = LocationChooser()
+    if os.path.isfile('./override.json'):
         try:
-            with open('./override', 'r') as file_handle:
-                location = file_handle.readline(),strip()
+            with open('./override.json', 'r') as file_handle:
+                location = json.load(file_handle)
         except IOError, err:
             print(err)
-        os.unlink('./override')
+        os.unlink('./override.json')
     else:
-        location = select_location(locations)
+        # Let the bot choose a location
+        location = magic8ball.select_location()
 
     notify_twitter(location)
-    add_location_to_prior_locations(location)
+    if not dryrun():
+        magic8ball.add_location_to_prior_locations(location)
 
 if __name__ == '__main__':
+    logging.basicConfig(level=logging.DEBUG)
     main()
