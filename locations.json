@@ -115,6 +115,11 @@
          "url" : "http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Peace-Park.aspx"
       },
       {
+         "name" : "Poetic Park Plaza",
+         "url" : "http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Poetic-Park.aspx",
+         "low_limit" : 0
+      },
+      {
          "low_limit" : 0,
          "url" : "http://www.calgaryplus.ca/calgary/venues/pumphouse-park",
          "name" : "Pumphouse Park"
