@@ -140,6 +140,12 @@
          "low_limit" : 0
       },
       {
+         "high_limit" : 0,
+         "address" : "506 4th St SW",
+         "name" : "@sanctuary4yyc",
+         "rainy_day": true
+      },
+      {
          "low_limit" : 0,
          "url" : "http://www.calgary.ca/CSPS/Parks/Pages/Locations/SW-parks/Sandy-Beach.aspx",
          "name" : "Sandy Beach"
