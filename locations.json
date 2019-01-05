@@ -120,7 +120,7 @@
          "low_limit" : 0
       },
       {
-         "low_limit" : 0,
+         "low_limit" : 3,
          "url" : "http://www.calgaryplus.ca/calgary/venues/pumphouse-park",
          "name" : "Pumphouse Park"
       },
