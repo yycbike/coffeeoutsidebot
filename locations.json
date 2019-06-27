@@ -19,12 +19,6 @@
          "rainy_day": true
       },
       {
-         "high_limit" : 0,
-         "address" : "1040 8th St SW",
-         "name" : "@bumpyscafe",
-         "rainy_day": true
-      },
-      {
          "address" : "420 2nd Street SW",
          "high_limit" : 0,
          "name" : "@monogramco",
