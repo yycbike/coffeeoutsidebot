@@ -1,12 +1,12 @@
 #!/usr/bin/env python
 # CoffeeOutsideBot
-# Copyright 2016-2018, David Crosby
+# Copyright 2016-2019, David Crosby
 # BSD 2-clause license
 
 import os
 import json
 import logging
-from ConfigParser import SafeConfigParser
+from configparser import SafeConfigParser
 import openweathermapy.core as owm
 
 class Forecast:
@@ -40,5 +40,5 @@ class Forecast:
 if __name__ == '__main__':
     logging.basicConfig(level=logging.DEBUG)
     ee = Forecast()
-    print("forecast temperature:", ee.temperature())
-    print("forecast humidity:", ee.humidity())
+    print(("forecast temperature:", ee.temperature()))
+    print(("forecast humidity:", ee.humidity()))

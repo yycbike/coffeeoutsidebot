@@ -2,6 +2,10 @@
 
 The CoffeeOutsideBot is super high-tech artificial intelligence, designed to pick a location in the city for the #yycbike crowd to meet and enjoy some hot coffee (or tea!).
 
+## Requirements
+
+* Python 3.2+
+
 ## Installation
 
 ```
@@ -20,5 +24,5 @@ You can get an API key at https://openweathermap.org/price
 To have the coffeeoutsidebot fire regularly, set up a cron job
 
 ```
-0 17 * * 3  /bin/bash -c "source /path/to/coffeeoutsidebot/env/bin/activate && pushd /path/to/coffeeoutsidebot/ && /path/to/coffeeoutsidebot/env/bin/python /path/to/coffeeoutsidebot/coffeeoutsidebot.py"
+0 17 * * 3  /bin/bash -c "source /path/to/coffeeoutsidebot/bin/activate && pushd /path/to/coffeeoutsidebot/ && /path/to/coffeeoutsidebot/bin/python /path/to/coffeeoutsidebot/coffeeoutsidebot.py"
 ```

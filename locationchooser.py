@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # CoffeeOutsideBot
-# Copyright 2016-2018, David Crosby
+# Copyright 2016-2019, David Crosby
 # BSD 2-clause license
 
 import os
@@ -8,7 +8,7 @@ import json
 import random
 import logging
 from twitter import *
-from ConfigParser import SafeConfigParser
+from configparser import SafeConfigParser
 from weather import Forecast
 
 # TODO If no override, use LocationChooser
@@ -24,7 +24,7 @@ class LocationChooser():
         try:
             with open(locations_file, 'r') as fp:
                 locations = json.load(fp)
-        except IOError, err:
+        except IOError as err:
             print(err)
         self.locations = locations["locations"]
 
@@ -63,7 +63,7 @@ class LocationChooser():
                 for l in file_handle:
                     if len(l.strip()) > 0:
                         prior.append(l.strip())
-        except IOError, err:
+        except IOError as err:
             print(err)
         self.prior_locations = prior[-8:]
 
@@ -71,13 +71,13 @@ class LocationChooser():
         try:
             with open('./prior_locations', 'a+') as file_handle:
                 file_handle.write(location["name"] + "\n")
-        except IOError, err:
+        except IOError as err:
             print(err)
 
 if __name__ == '__main__':
     import pprint
     logging.basicConfig(level=logging.DEBUG)
     ee = LocationChooser()
-    print("Chosen location", ee.select_location())
+    print(("Chosen location", ee.select_location()))
     pp = pprint.PrettyPrinter(indent=2)
     pp.pprint(ee.valid_locations)

@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # CoffeeOutsideBot
-# Copyright 2016-2018, David Crosby
+# Copyright 2016-2019, David Crosby
 # BSD 2-clause license
 #
 # TODO - automate Cyclepalooza event creation
@@ -9,13 +9,13 @@ import os
 import json
 import logging
 from twitter import *
-from ConfigParser import SafeConfigParser
+from configparser import ConfigParser
 from weather import Forecast
 from locationchooser import LocationChooser
 
 # TODO clean up config file parsing
 def retrieve_twitter_config(config_file='./cb_config.ini'):
-    parser = SafeConfigParser()
+    parser = ConfigParser()
     parser.read(config_file)
 
     tcreds = {}
@@ -36,7 +36,7 @@ def notify_twitter(location):
     if 'address' in location:
         new_status += " (" + location["address"] + ")"
     new_status += ", see you there! #yycbike"
-    print("Twitter:" + new_status)
+    print(("Twitter:" + new_status))
 
     tcreds = retrieve_twitter_config()
 
@@ -58,7 +58,7 @@ def main():
         try:
             with open('./override.json', 'r') as file_handle:
                 location = json.load(file_handle)
-        except IOError, err:
+        except IOError as err:
             print(err)
         os.unlink('./override.json')
     else:
