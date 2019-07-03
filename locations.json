@@ -19,6 +19,13 @@
          "rainy_day": true
       },
       {
+         "url" : "https://www.calgaryheritageroastingco.com/",
+         "name" : "Calgary Heritage Roasting Company",
+         "address" : "2020 11 St SE",
+         "high_limit" : 5,
+         "rainy_day": true
+      },
+      {
          "address" : "420 2nd Street SW",
          "high_limit" : 0,
          "name" : "@monogramco",
