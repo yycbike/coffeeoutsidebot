@@ -55,8 +55,7 @@
       {
          "url" : "http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Connaught-Park.aspx",
          "low_limit" : -15,
-         "name" : "Connaught Park",
-         "rainy_day": true
+         "name" : "Connaught Park"
       },
       {
          "name" : "Enmax Stage on Prince's Island",
