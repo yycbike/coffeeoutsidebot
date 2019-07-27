@@ -44,7 +44,7 @@
       },
       {
          "name" : "Buckmaster Park",
-         "low_limit" : 15,
+         "low_limit" : 10,
          "address" : "1629 21 Ave SW"
       },
       {
@@ -64,7 +64,7 @@
          "rainy_day": true
       },
       {
-         "low_limit" : 15,
+         "low_limit" : 10,
          "name" : "Gerry Shaw Gardens",
          "address" : "Elbow Drive & 30th Ave SW"
       },
@@ -126,7 +126,7 @@
       },
       {
          "name" : "Reader Rock Garden",
-         "low_limit" : 15,
+         "low_limit" : 10,
          "url" : "http://www.calgary.ca/CSPS/Parks/Pages/Locations/SE-parks/Reader-Rock-Garden.aspx"
       },
       {
@@ -161,7 +161,7 @@
          "name" : "Sien Lok Park"
       },
       {
-         "low_limit" : 15,
+         "low_limit" : 10,
          "url" : "http://www.calgary.ca/CSPS/Parks/Pages/Locations/SW-parks/Stanley-Park.aspx",
          "name" : "Stanley Park Flower Garden"
       },
