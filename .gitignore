@@ -6,3 +6,4 @@ deploy.sh
 bin
 lib
 pyvenv.cfg
+override.json
