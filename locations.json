@@ -58,6 +58,12 @@
          "name" : "Connaught Park"
       },
       {
+         "name" : "East Village Music Pavilion",
+         "url" : "https://www.evexperience.com/music-pavilion",
+         "low_limit" : -10,
+         "rainy_day": true
+      },
+      {
          "name" : "Enmax Stage on Prince's Island",
          "url" : "http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Princes-Island-Park.aspx",
          "low_limit" : -10,
