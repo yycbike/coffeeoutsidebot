@@ -84,6 +84,11 @@
          "url" : "http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Haultain-Park.aspx"
       },
       {
+         "name" : "Humpy Hollow Park",
+         "url" : "https://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Humpy-Hollow-Park.aspx",
+         "low_limit" : 10
+      },
+      {
          "high_limit" : -2,
          "name" : "Ice Rink at Olympic Plaza",
          "url" : "http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Olympic-Plaza.aspx",
