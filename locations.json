@@ -199,6 +199,12 @@
          "low_limit" : 0
       },
       {
+         "name" : "Tomkins Park",
+         "url" : "https://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Tomkins-Park.aspx",
+         "low_limit" : -5,
+         "rainy_day": true
+      },
+      {
          "low_limit" : -10,
          "url" : "https://www.google.ca/maps/place/McDougall+Centre,+Calgary,+AB+T2P/@51.049273,-114.0773586,17z/data=!4m2!3m1!1s0x53716fe4fd339a6f:0x6a0dd3ff806e1e98",
          "name" : "West Side of McDougall Centre"
