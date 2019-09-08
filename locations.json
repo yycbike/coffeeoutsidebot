@@ -177,6 +177,11 @@
          "name" : "Stanley Park Flower Garden"
       },
       {
+         "low_limit" : 7,
+         "name" : "Sunalta Community Wildflower Garden",
+         "address" : "1310 16 St SW"
+      },
+      {
          "name" : "The Rise on St. Patrick's Island",
          "url" : "http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/St.-Patrick's-Island-Park.aspx",
          "low_limit" : 0
