@@ -19,6 +19,12 @@
          "rainy_day": true
       },
       {
+         "url" : "https://iloveyoucoffeeshop.com/",
+         "name" : "@iloveyoucoffee_",
+         "high_limit" : 5,
+         "rainy_day": true
+      },
+      {
          "url" : "https://www.calgaryheritageroastingco.com/",
          "name" : "Calgary Heritage Roasting Company",
          "address" : "2020 11 St SE",
