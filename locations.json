@@ -54,6 +54,12 @@
          "address" : "1629 21 Ave SW"
       },
       {
+         "high_limit" : 0,
+         "address" : "909 10 St SE",
+         "name" : "@cafegravity",
+         "rainy_day": true
+      },
+      {
          "name" : "Central Memorial Park",
          "low_limit" : -15,
          "url" : "http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Central-Memorial-Park.aspx"
@@ -155,12 +161,6 @@
          "address" : "632 13 Avenue SE",
          "name" : "Rundle Ruins",
          "low_limit" : 0
-      },
-      {
-         "high_limit" : 0,
-         "address" : "506 4th St SW",
-         "name" : "@sanctuary4yyc",
-         "rainy_day": true
       },
       {
          "low_limit" : 0,
