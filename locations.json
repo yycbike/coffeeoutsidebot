@@ -199,6 +199,12 @@
          "rainy_day": true
       },
       {
+         "name" : "Société Coffee Lounge",
+         "high_limit" : -3,
+         "address" : "1223 11 Ave SW",
+         "rainy_day": true
+      },
+      {
          "name" : "Thomson Family Park",
          "url" : "http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Thomson-Family-Park.aspx",
          "low_limit" : 0,
