@@ -7,7 +7,7 @@
          "rainy_day": true
       },
       {
-         "high_limit" : 10,
+         "high_limit" : 5,
          "name" : "@SidewalkSimmons",
          "url" : "http://sidewalkcitizenbakery.com/",
          "rainy_day": true
@@ -159,7 +159,7 @@
          "url" : "http://www.calgary.ca/CSPS/Parks/Pages/Locations/SE-parks/Reader-Rock-Garden.aspx"
       },
       {
-         "low_limit" : 10,
+         "low_limit" : 5,
          "url" : "http://www.calgary.ca/CSPS/Parks/Pages/Locations/NE-parks/Rotary-Park.aspx",
          "name" : "Rotary Park"
       },
@@ -208,6 +208,13 @@
          "name" : "Societe Coffee Lounge",
          "high_limit" : -3,
          "address" : "1223 11 Ave SW",
+         "rainy_day": true
+      },
+      {
+         "name" : "Sought X Found Coffee",
+         "url" : "https://www.soughtxfound.coffee",
+         "high_limit" : -3,
+         "address" : "916 Centre Street North",
          "rainy_day": true
       },
       {
