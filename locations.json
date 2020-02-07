@@ -25,6 +25,13 @@
          "rainy_day": true
       },
       {
+         "url" : "http://www.bayaricacafe.ca/",
+         "name" : "@BayaRicaCafe",
+         "address" : "204 7A Street NE",
+         "high_limit" : 5,
+         "rainy_day": true
+      },
+      {
          "url" : "https://www.calgaryheritageroastingco.com/",
          "name" : "Calgary Heritage Roasting Company",
          "address" : "2020 11 St SE",
