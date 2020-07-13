@@ -143,6 +143,12 @@
          "low_limit" : 0
       },
       {
+         "name" : "East Side of St. Patrick's Island",
+         "url" : "http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/St.-Patrick's-Island-Park.aspx",
+         "low_limit" : -5,
+         "rainy_day": true
+      },
+      {
          "name" : "Thomson Family Park",
          "url" : "http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Thomson-Family-Park.aspx",
          "low_limit" : 0,
