@@ -4,5 +4,6 @@ consumer_key = xxxxxxxxxxxxxxxxxxxxxxxxx
 token = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 token_secret = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 [openweathermap]
+cty_id = 5913490
 appid = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 units = metric
