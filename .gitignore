@@ -3,3 +3,4 @@ coffeeoutsidebot
 deploy
 override.json
 prior_locations.json
+*.ics
