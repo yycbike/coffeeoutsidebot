@@ -6,25 +6,40 @@ import (
 
 	"github.com/dghubble/go-twitter/twitter"
 	"github.com/dghubble/oauth1"
+	"gopkg.in/ini.v1"
 )
 
-func twitter_string(l location) (tweet_str string) {
-	var url_str, address_str string
-	if l.url() != "" {
-		url_str = fmt.Sprintf(" %v", l.url())
-	}
-	if l.address() != "" {
-		address_str = fmt.Sprintf(" (%v)", l.address())
-	}
-	return fmt.Sprintf("This week's #CoffeeOutside - %v%v%v, see you there! #yycbike", l.Name, url_str, address_str)
+type TwitterDispatch struct {
+	config_file string
+	location    location
+	client      *twitter.Client
 }
 
-func notify_twitter(consumer_key string, consumer_secret string, access_token string, access_token_secret string, tweet_str string) {
-	config := oauth1.NewConfig(consumer_key, consumer_secret)
-	token := oauth1.NewToken(access_token, access_token_secret)
+func (t *TwitterDispatch) generate_client() {
+	cfg, err := ini.Load(t.config_file)
+	if err != nil {
+		log.Fatalf("Fail to read file: %v", err)
+	}
+	config := oauth1.NewConfig(cfg.Section("twitter").Key("consumer_key").String(), cfg.Section("twitter").Key("consumer_secret").String())
+	token := oauth1.NewToken(cfg.Section("twitter").Key("token").String(), cfg.Section("twitter").Key("token_secret").String())
 	httpClient := config.Client(oauth1.NoContext, token)
 	client := twitter.NewClient(httpClient)
+	t.client = client
+}
 
-	tweet, resp, err := client.Statuses.Update(tweet_str, nil)
+func (t TwitterDispatch) notify_twitter() {
+	t.generate_client()
+	tweet, resp, err := t.client.Statuses.Update(t.twitter_string(), nil)
 	log.Printf("tweet: %v resp: %v err: %v", tweet, resp, err)
+}
+
+func (t TwitterDispatch) twitter_string() string {
+	var url_str, address_str string
+	if t.location.url() != "" {
+		url_str = fmt.Sprintf(" %v", t.location.url())
+	}
+	if t.location.address() != "" {
+		address_str = fmt.Sprintf(" (%v)", t.location.address())
+	}
+	return fmt.Sprintf("This week's #CoffeeOutside - %v%v%v, see you there! #yycbike", t.location.Name, url_str, address_str)
 }

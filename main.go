@@ -53,18 +53,13 @@ func main() {
 
 	log.Println(location)
 
-	tweet_str := twitter_string(location)
-
 	start := next_event()
 	dur, _ := time.ParseDuration("1h")
 	end := start.Add(dur)
 	ical_str := generate_ical_event_string(time.Now(), start, end, location)
 	if production {
-		notify_twitter(cfg.Section("twitter").Key("consumer_key").String(),
-			cfg.Section("twitter").Key("consumer_secret").String(),
-			cfg.Section("twitter").Key("token").String(),
-			cfg.Section("twitter").Key("token_secret").String(),
-			tweet_str)
+		twit := TwitterDispatch{config_file: "cb_config.ini", location: location}
+		twit.notify_twitter()
 		ical_file, err := os.Create("yyc.ics")
 		if err != nil {
 			log.Println("Couldn't write icalendar file")
@@ -72,7 +67,8 @@ func main() {
 		defer ical_file.Close()
 		ical_file.WriteString(ical_str)
 	} else {
-		fmt.Println(tweet_str)
+		twit := TwitterDispatch{location: location}
+		fmt.Println(twit.twitter_string())
 		fmt.Println(ical_str)
 	}
 }
