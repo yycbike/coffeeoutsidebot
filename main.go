@@ -45,23 +45,16 @@ func main() {
 	production := cfg.Section("").Key("production").MustBool(false)
 	log.Printf("Is this production? %v", production)
 
-	cityId, _ := cfg.Section("openweathermap").Key("cty_id").Int()
-	apiKey := cfg.Section("openweathermap").Key("appid").String()
-	forecast := get_forecast(apiKey, cityId)
-
-	log.Println("Weather test")
-	log.Printf("Weather temp %v", forecast.temp)
-	log.Printf("Weather humidity %v", forecast.humidity)
-
-	log.Println("Locations test")
+	ws := WeatherService{config_file: "cb_config.ini"}
+	forecast := ws.get_forecast()
 	location := SelectLocation(forecast)
-
-	log.Println(location)
 
 	start := next_event()
 	dur, _ := time.ParseDuration("1h")
 	end := start.Add(dur)
 	dispatch := Dispatch{start_time: start, end_time: end, location: location}
+
+	log.Println(dispatch)
 	twitter := TwitterDispatch{config_file: "cb_config.ini", dispatch: dispatch}
 	ical := IcalDispatch{output_file: "yyc.ics", dispatch: dispatch}
 	if production {
