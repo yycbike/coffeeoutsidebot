@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"log"
-	"os"
 	"time"
 
 	"gopkg.in/ini.v1"
@@ -31,6 +30,12 @@ func next_event() time.Time {
 	return next_date
 }
 
+type Dispatch struct {
+	location   location
+	start_time time.Time
+	end_time   time.Time
+}
+
 func main() {
 	cfg, err := ini.Load("cb_config.ini")
 	if err != nil {
@@ -56,19 +61,15 @@ func main() {
 	start := next_event()
 	dur, _ := time.ParseDuration("1h")
 	end := start.Add(dur)
-	ical_str := generate_ical_event_string(time.Now(), start, end, location)
+	dispatch := Dispatch{start_time: start, end_time: end, location: location}
+	twitter := TwitterDispatch{config_file: "cb_config.ini", dispatch: dispatch}
+	ical := IcalDispatch{output_file: "yyc.ics", dispatch: dispatch}
 	if production {
-		twit := TwitterDispatch{config_file: "cb_config.ini", location: location}
-		twit.notify_twitter()
-		ical_file, err := os.Create("yyc.ics")
-		if err != nil {
-			log.Println("Couldn't write icalendar file")
-		}
-		defer ical_file.Close()
-		ical_file.WriteString(ical_str)
+		twitter.notify()
+		ical.notify()
 	} else {
-		twit := TwitterDispatch{location: location}
-		fmt.Println(twit.twitter_string())
-		fmt.Println(ical_str)
+		// TODO maybe a standard debug interface?
+		fmt.Println(twitter.twitter_string())
+		fmt.Println(ical.event_string(time.Now()))
 	}
 }

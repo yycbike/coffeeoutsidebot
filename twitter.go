@@ -11,7 +11,7 @@ import (
 
 type TwitterDispatch struct {
 	config_file string
-	location    location
+	dispatch    Dispatch
 	client      *twitter.Client
 }
 
@@ -27,7 +27,7 @@ func (t *TwitterDispatch) generate_client() {
 	t.client = client
 }
 
-func (t TwitterDispatch) notify_twitter() {
+func (t TwitterDispatch) notify() {
 	t.generate_client()
 	tweet, resp, err := t.client.Statuses.Update(t.twitter_string(), nil)
 	log.Printf("tweet: %v resp: %v err: %v", tweet, resp, err)
@@ -35,11 +35,11 @@ func (t TwitterDispatch) notify_twitter() {
 
 func (t TwitterDispatch) twitter_string() string {
 	var url_str, address_str string
-	if t.location.url() != "" {
-		url_str = fmt.Sprintf(" %v", t.location.url())
+	if t.dispatch.location.url() != "" {
+		url_str = fmt.Sprintf(" %v", t.dispatch.location.url())
 	}
-	if t.location.address() != "" {
-		address_str = fmt.Sprintf(" (%v)", t.location.address())
+	if t.dispatch.location.address() != "" {
+		address_str = fmt.Sprintf(" (%v)", t.dispatch.location.address())
 	}
-	return fmt.Sprintf("This week's #CoffeeOutside - %v%v%v, see you there! #yycbike", t.location.Name, url_str, address_str)
+	return fmt.Sprintf("This week's #CoffeeOutside - %v%v%v, see you there! #yycbike", t.dispatch.location.Name, url_str, address_str)
 }
