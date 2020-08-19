@@ -66,8 +66,21 @@ func check(e error) {
 		panic(e)
 	}
 }
+func (l location) use_location_forecast(f forecast) bool {
+	if f.temp < l.low_limit() {
+		log.Printf("Location: %v, fail reason %v\n", l.Name, "Low temp")
+		return false
+	} else if f.temp > l.high_limit() {
+		log.Printf("Location: %v, fail reason %v\n", l.Name, "High temp")
+		return false
+	} else if f.humidity > humidity_limit && !l.rainy_day() {
+		log.Printf("Location: %v, fail reason %v\n", l.Name, "Humidity")
+		return false
+	}
+	return true
+}
 
-func retrieve_locations_list() (l []location) {
+func retrieve_locations_list() []location {
 	dat, err := ioutil.ReadFile("./locations.json")
 	check(err)
 
@@ -76,7 +89,6 @@ func retrieve_locations_list() (l []location) {
 	if err != nil {
 		log.Println("Couldn't retrieve locations list:", err)
 	}
-	log.Printf("Locations list: %+v", things)
 
 	return things
 }
@@ -103,32 +115,73 @@ func retrieve_override_location() (l location) {
 }
 
 func SelectLocation(f forecast) (l location) {
+	// Check for an override
 	if _, err := os.Stat(override_file_name); err == nil {
 		log.Println("Override found")
 		return retrieve_override_location()
 	}
 
+	// Get entire pool of locations
 	all_locations := retrieve_locations_list()
-	var prior_locations []string = read_prior_locations_file()
+
+	// Filter out only the locations that meet the weather parameters
 	var usable_locations []location
 	for _, loc := range all_locations {
-		use, reason := use_location_forecast(loc, f)
-		if use != true {
-			fmt.Printf("Location: %v, fail reason %v\n", loc.Name, reason)
-		} else if location_used_prior(loc.Name, prior_locations) {
-			fmt.Printf("Location: %v, fail reason prior locations\n", loc.Name)
-		} else {
+		if loc.use_location_forecast(f) {
 			usable_locations = append(usable_locations, loc)
 		}
 	}
 
-	fmt.Println(len(usable_locations))
+	// Find whichever viable location was chosen furthest ago
+	chosen_location := get_last_used_usable(usable_locations)
+	return chosen_location
+}
 
-	// Pick a random location
+func remove_loc_from_list(s []location, p string) []location {
+	log.Printf("removing %v", p)
+	var i int
+	for j, loc := range s {
+		if loc.Name == p {
+			i = j
+			break
+		}
+	}
+	s[i] = s[0]
+	return s[1:]
+}
 
-	var chosen_location = usable_locations[rand.Intn(len(usable_locations))]
+// TODO This is inefficient, but N is small for now
+func get_last_used_usable(l []location) location {
+	var prior_locations []string = read_prior_locations_file()
+	var p string
+
+	var usable_locations []location
+	usable_locations = l
+
+	// Work through prior locations, until there's only one location left to choose
+	for len(usable_locations) > 1 {
+		// log.Printf("loop %v", usable_locations)
+		// Get most recent location from list
+		if len(prior_locations) > 0 {
+			p = prior_locations[len(prior_locations)-1]
+			prior_locations = prior_locations[:len(prior_locations)-1]
+		} else {
+			// There's no more prior locations, so break out of the loop
+			break
+		}
+
+		// If location is in usable locations, remove it from the choices
+		usable_locations = remove_loc_from_list(usable_locations, p)
+	}
+
+	// If there's multiple locations remaining, choose a random location
+	// If there's only 1, this should just pick the 1
+	chosen_location := usable_locations[rand.Intn(len(usable_locations))]
+
+	// Append this location to the chosen list
 	append_prior_locations_file(chosen_location)
 	return chosen_location
+
 }
 
 func location_used_prior(l string, p []string) bool {
@@ -145,7 +198,6 @@ func append_prior_locations_file(l location) {
 	priors := read_prior_locations_file()
 	log.Printf("Prior locations list: %+v", priors)
 	new_priors := append(priors, l.Name)
-	log.Printf("New prior locations list: %+v", new_priors)
 	js, _ := json.Marshal(new_priors)
 
 	err := ioutil.WriteFile(prior_locations_file_name, js, 0644)
@@ -163,18 +215,6 @@ func read_prior_locations_file() []string {
 	if err != nil {
 		log.Println("Couldn't retrieve prior_locations list:", err)
 	}
-	log.Printf("Locations list: %+v", things)
 
 	return things
-}
-
-func use_location_forecast(l location, f forecast) (use bool, reason string) {
-	if f.temp < l.low_limit() {
-		return false, "Low temp"
-	} else if f.temp > l.high_limit() {
-		return false, "High temp"
-	} else if f.humidity > humidity_limit && !l.rainy_day() {
-		return false, "Humidity"
-	}
-	return true, ""
 }

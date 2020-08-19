@@ -47,8 +47,8 @@ func main() {
 
 	ws := WeatherService{config_file: "cb_config.ini"}
 	forecast := ws.get_forecast()
-	location := SelectLocation(forecast)
 
+	location := SelectLocation(forecast)
 	start := next_event()
 	dur, _ := time.ParseDuration("1h")
 	end := start.Add(dur)
