@@ -103,6 +103,12 @@
          "url" : "http://www.calgary.ca/CSPS/Parks/Pages/Locations/SE-parks/Reader-Rock-Garden.aspx"
       },
       {
+         "name" : "Riley Park (Stage)",
+         "url" : "https://www.calgary.ca/csps/parks/locations/nw-parks/riley-park.html",
+         "low_limit" : -10,
+         "rainy_day": true
+      },
+      {
          "low_limit" : 5,
          "url" : "http://www.calgary.ca/CSPS/Parks/Pages/Locations/NE-parks/Rotary-Park.aspx",
          "name" : "Rotary Park"
@@ -116,6 +122,11 @@
          "low_limit" : 0,
          "url" : "http://www.calgary.ca/CSPS/Parks/Pages/Locations/SW-parks/Sandy-Beach.aspx",
          "name" : "Sandy Beach"
+      },
+      {
+         "url" : "https://goo.gl/maps/yzMjfBj4JrKQxkvu6",
+         "low_limit" : 0,
+         "name" : "South Mount Royal Park"
       },
       {
          "url" : "http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Shaw-Millennium-Park.aspx",
