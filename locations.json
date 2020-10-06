@@ -52,6 +52,11 @@
          "url" : "http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Haultain-Park.aspx"
       },
       {
+         "name" : "High Park",
+         "low_limit" : 0,
+         "url" : "https://www.beltlineyyc.ca/highparkyyc"
+      },
+      {
          "name" : "Humpy Hollow Park",
          "url" : "https://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Humpy-Hollow-Park.aspx",
          "low_limit" : 10
