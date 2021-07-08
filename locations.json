@@ -26,6 +26,12 @@
          "rainy_day": true
       },
       {
+         "name" : "Delta Park",
+         "url" : "https://www.google.com/maps/place/Delta+Garden/@51.0521029,-114.0786464,17z/",
+         "low_limit" : -10,
+         "rainy_day": false
+      },
+      {
          "name" : "Enmax Stage on Prince's Island",
          "url" : "http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Princes-Island-Park.aspx",
          "low_limit" : -10,
