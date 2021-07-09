@@ -16,6 +16,10 @@ You can get the necessary API keys at https://dev.twitter.com/
 ## OpenWeatherMap integration
 You can get an API key at https://openweathermap.org/price
 
+## iCalendar integration
+An .ics file is auto generated. The current bot's version can be found at
+https://coffeeoutside.bike/yyc.ics
+
 ## Cron job
 To have the coffeeoutsidebot fire regularly, set up a cron job
 
