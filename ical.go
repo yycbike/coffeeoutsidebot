@@ -8,9 +8,8 @@ import (
 )
 
 type IcalDispatch struct {
-	dispatch      Dispatch
-	creation_time time.Time
-	output_file   string
+	dispatch    Dispatch
+	output_file string
 }
 
 func (i IcalDispatch) notify() {
