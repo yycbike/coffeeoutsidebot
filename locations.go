@@ -184,16 +184,6 @@ func get_last_used_usable(l []location) location {
 
 }
 
-func location_used_prior(l string, p []string) bool {
-	for _, i := range p {
-		if l == i {
-			return true
-
-		}
-	}
-	return false
-}
-
 func append_prior_locations_file(l location) {
 	priors := read_prior_locations_file()
 	log.Printf("Prior locations list: %+v", priors)
