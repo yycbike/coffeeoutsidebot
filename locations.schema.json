@@ -1,0 +1,32 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://coffeeoutside.bike/locations.schema.json",
+  "title": "CoffeeOutside location schema",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string"
+      },
+      "url": {
+        "type": "string"
+      },
+      "address": {
+        "type": "string"
+      },
+      "rainy_day": {
+        "type": "boolean"
+      },
+      "low_limit": {
+        "type": "number"
+      },
+      "high_limit": {
+        "type": "number"
+      }
+    },
+    "required": [
+      "name"
+    ]
+  }
+}
