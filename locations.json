@@ -63,6 +63,11 @@
          "url" : "https://www.beltlineyyc.ca/highparkyyc"
       },
       {
+         "name" : "Horsy Park",
+         "low_limit" : 10,
+         "url" : "https://goo.gl/maps/ido1KAcqdJGtkeVN8"
+      },
+      {
          "name" : "Humpy Hollow Park",
          "url" : "https://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Humpy-Hollow-Park.aspx",
          "low_limit" : 10
