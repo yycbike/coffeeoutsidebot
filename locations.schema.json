@@ -7,22 +7,32 @@
     "type": "object",
     "properties": {
       "name": {
+        "description": "Name of the meetup location",
         "type": "string"
       },
       "url": {
+        "description": "URL for the site. Order of preference: City of Calgary link (if park), Cafe website (if inside), Google Maps URL",
         "type": "string"
       },
       "address": {
+        "description": "Physical address for the location",
         "type": "string"
       },
       "rainy_day": {
+        "description": "True if site is adequate for a rainy day",
         "type": "boolean"
       },
       "low_limit": {
-        "type": "number"
+        "description": "The lowest temperature that the site would be comfortable for",
+        "type": "number",
+        "minimum": -50,
+        "maximum": 50
       },
       "high_limit": {
-        "type": "number"
+        "description": "The highest temperature that the site would be comfortable for (more suited for indoor locations)",
+        "type": "number",
+        "minimum": -50,
+        "maximum": 50
       }
     },
     "required": [
