@@ -22,6 +22,10 @@
         "description": "True if site is adequate for a rainy day",
         "type": "boolean"
       },
+      "paused": {
+        "description": "True if site is paused from being used",
+        "type": "boolean"
+      },
       "low_limit": {
         "description": "The lowest temperature that the site would be comfortable for",
         "type": "number",

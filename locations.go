@@ -22,6 +22,7 @@ type location struct {
 	High_limit *int
 	Low_limit  *int
 	Rainy_day  *bool
+	Paused     *bool
 }
 
 // Generics would be nice here...
@@ -29,6 +30,13 @@ func (l location) rainy_day() bool {
 	var r bool = false
 	if l.Rainy_day != nil {
 		r = *l.Rainy_day
+	}
+	return r
+}
+func (l location) paused() bool {
+	var r bool = false
+	if l.Paused != nil {
+		r = *l.Paused
 	}
 	return r
 }
@@ -124,9 +132,13 @@ func SelectLocation(f forecast) (l location) {
 	// Get entire pool of locations
 	all_locations := retrieve_locations_list()
 
-	// Filter out only the locations that meet the weather parameters
 	var usable_locations []location
 	for _, loc := range all_locations {
+		if loc.paused() {
+			log.Printf("Skipping %v, paused", loc.Name)
+			continue
+		}
+		// Filter out only the locations that meet the weather parameters
 		if loc.use_location_forecast(f) {
 			usable_locations = append(usable_locations, loc)
 		}
