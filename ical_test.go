@@ -14,7 +14,8 @@ DTSTART;TZID=America/Edmonton:20200710T073000
 DTEND;TZID=America/Edmonton:20200710T083000
 SUMMARY:CoffeeOutside - Tomkins Park
 END:VEVENT
-END:VCALENDAR`
+END:VCALENDAR
+`
 
 func TestIcalGeneration(t *testing.T) {
 	mock_start_date := time.Date(2020, time.July, 10, 7, 30, 0, 0, time.UTC)

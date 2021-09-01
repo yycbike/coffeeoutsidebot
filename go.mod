@@ -1,6 +1,6 @@
 module github.com/yycbike/coffeeoutside
 
-go 1.14
+go 1.16
 
 require (
 	github.com/briandowns/openweathermap v0.16.0

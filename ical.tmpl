@@ -1,0 +1,10 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+UID:{{ .CreationTime }}@coffeeoutside.bike
+DTSTAMP;TZID=America/Edmonton:{{ .CreationTime }}
+DTSTART;TZID=America/Edmonton:{{ .StartTime }}
+DTEND;TZID=America/Edmonton:{{ .EndTime }}
+SUMMARY:CoffeeOutside - {{ .LocationName }}
+END:VEVENT
+END:VCALENDAR

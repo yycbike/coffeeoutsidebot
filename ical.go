@@ -1,9 +1,11 @@
 package main
 
 import (
-	"fmt"
+	"bytes"
+	"embed"
 	"log"
 	"os"
+	"text/template"
 	"time"
 )
 
@@ -21,26 +23,31 @@ func (i IcalDispatch) notify() {
 	ical_file.WriteString(i.event_string(time.Now()))
 }
 
+// TODO put weather forecast in event
+// TODO put location URL in event
+
+//go:embed *tmpl
+var f embed.FS
+
+type IcalVars struct {
+	CreationTime string
+	StartTime    string
+	EndTime      string
+	LocationName string
+}
+
 func (i IcalDispatch) event_string(creation_time time.Time) string {
-	calendar_string := `BEGIN:VCALENDAR
-VERSION:2.0
-BEGIN:VEVENT
-`
+	var data IcalVars
 
 	stringformat := "20060102T150405"
-	formatted_creation := creation_time.Format(stringformat)
-	formatted_start := i.dispatch.start_time.Format(stringformat)
-	formatted_end := i.dispatch.end_time.Format(stringformat)
+	data.CreationTime = creation_time.Format(stringformat)
+	data.StartTime = i.dispatch.start_time.Format(stringformat)
+	data.EndTime = i.dispatch.end_time.Format(stringformat)
+	data.LocationName = i.dispatch.location.Name
 
-	calendar_string += fmt.Sprintf("UID:%v@coffeeoutside.bike\n", formatted_creation)
-	calendar_string += fmt.Sprintf("DTSTAMP;TZID=America/Edmonton:%v\n", formatted_creation)
-	calendar_string += fmt.Sprintf("DTSTART;TZID=America/Edmonton:%v\n", formatted_start)
-	calendar_string += fmt.Sprintf("DTEND;TZID=America/Edmonton:%v\n", formatted_end)
+	tmpl := template.Must(template.ParseFS(f, "ical.tmpl"))
+	var buf bytes.Buffer
+	tmpl.Execute(&buf, data)
 
-	calendar_string += fmt.Sprintf("SUMMARY:CoffeeOutside - %v\n", i.dispatch.location.Name)
-
-	calendar_string += `END:VEVENT
-END:VCALENDAR`
-
-	return calendar_string
+	return buf.String()
 }
