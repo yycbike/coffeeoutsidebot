@@ -23,6 +23,7 @@ type location struct {
 	Low_limit  *int
 	Rainy_day  *bool
 	Paused     *bool
+	Geostr     *string // "lat_float;long_float"
 }
 
 // Generics would be nice here...

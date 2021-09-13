@@ -34,6 +34,7 @@ type IcalVars struct {
 	StartTime    string
 	EndTime      string
 	LocationName string
+	Geostr       string
 }
 
 func (i IcalDispatch) event_string(creation_time time.Time) string {
@@ -44,6 +45,11 @@ func (i IcalDispatch) event_string(creation_time time.Time) string {
 	data.StartTime = i.dispatch.start_time.Format(stringformat)
 	data.EndTime = i.dispatch.end_time.Format(stringformat)
 	data.LocationName = i.dispatch.location.Name
+
+	data.Geostr = ""
+	if i.dispatch.location.Geostr != nil {
+		data.Geostr = *i.dispatch.location.Geostr
+	}
 
 	tmpl := template.Must(template.ParseFS(f, "ical.tmpl"))
 	var buf bytes.Buffer

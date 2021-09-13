@@ -18,6 +18,10 @@
         "description": "Physical address for the location",
         "type": "string"
       },
+      "geostr": {
+        "description": "String for iCal geographical coordinates",
+        "type": "string"
+      },
       "rainy_day": {
         "description": "True if site is adequate for a rainy day",
         "type": "boolean"
