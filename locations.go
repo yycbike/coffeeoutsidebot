@@ -16,14 +16,15 @@ const override_file_name = "./override.json"
 const prior_locations_file_name = "./prior_locations.json"
 
 type location struct {
-	Name       string
-	Address    *string
-	Url        *string
-	High_limit *int
-	Low_limit  *int
-	Rainy_day  *bool
-	Paused     *bool
-	Geostr     *string // "lat_float;long_float"
+	Name          string
+	Address       *string
+	Url           *string
+	High_limit    *int
+	Low_limit     *int
+	Rainy_day     *bool
+	Paused        *bool
+	Geostr        *string // "lat_float;long_float"
+	Nearby_coffee *string
 }
 
 // Generics would be nice here...
@@ -55,6 +56,15 @@ func (l location) address() string {
 	}
 	return a
 }
+
+func (l location) nearby_coffee() string {
+	var a string = ""
+	if l.Nearby_coffee != nil {
+		a = *l.Nearby_coffee
+	}
+	return a
+}
+
 func (l location) high_limit() int {
 	var x int = 100
 	if l.High_limit != nil {

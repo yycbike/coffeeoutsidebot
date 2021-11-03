@@ -22,6 +22,10 @@
         "description": "String for iCal geographical coordinates",
         "type": "string"
       },
+      "nearby_coffee": {
+        "description": "Nearby places to purchase coffee",
+        "type": "string"
+      },
       "rainy_day": {
         "description": "True if site is adequate for a rainy day",
         "type": "boolean"
