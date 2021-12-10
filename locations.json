@@ -14,7 +14,7 @@
          "paused": true
       },
       {
-         "url" : "http://alforno.ca/",
+         "url" : "https://alforno.ca/",
          "name" : "@AlfornoYYC",
          "high_limit" : 5,
          "rainy_day": true,
@@ -47,8 +47,7 @@
          "address" : "420 2nd Street SW",
          "high_limit" : 0,
          "name" : "@monogramco",
-         "rainy_day": true,
-         "paused": true
+         "rainy_day": true
       },
       {
          "name" : "Barb Scott Park",
