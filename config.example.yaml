@@ -1,0 +1,11 @@
+production: false
+dispatchers:
+  twitter:
+    consumer_secret: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    consumer_key: xxxxxxxxxxxxxxxxxxxxxxxxxx
+    token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    token_secret: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+openweathermap:
+  city_id: 5913490
+  api_key: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  units: metric

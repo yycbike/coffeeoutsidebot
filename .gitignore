@@ -1,9 +1,8 @@
-cb_config.ini
-coffeeoutside*
-deploy
-override.json
-prior_locations.json
 *.ics
 /.bundle
 /vendor
 Gemfile.lock
+config.yaml
+override.yaml
+prior_locations.yaml
+yyc.json
