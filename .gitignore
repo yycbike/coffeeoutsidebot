@@ -4,3 +4,6 @@ deploy
 override.json
 prior_locations.json
 *.ics
+/.bundle
+/vendor
+Gemfile.lock

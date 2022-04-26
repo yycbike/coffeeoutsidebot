@@ -1,0 +1,15 @@
+type: map
+mapping:
+  "name":
+    desc: "Name of the meetup location"
+    type: str
+    required: yes
+  "url":
+    desc: "URL for the site. Order of preference: City of Calgary link (if park), Cafe website (if inside), Google Maps URL"
+    type: str
+  "address":
+    desc: "Physical address for the location"
+    type: str
+  "nearby_coffee":
+    desc: "Nearby places to purchase coffee"
+    type: str

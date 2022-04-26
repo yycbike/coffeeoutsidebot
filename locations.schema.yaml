@@ -1,0 +1,32 @@
+desc: CoffeeOutside location schema
+type: seq
+sequence:
+  - type: map
+    mapping:
+      "name":
+        desc: "Name of the meetup location"
+        type: str
+        required: yes
+      "url":
+        desc: "URL for the site. Order of preference: City of Calgary link (if park), Cafe website (if inside), Google Maps URL"
+        type: str
+      "address":
+        desc: "Physical address for the location"
+        type: str
+      "nearby_coffee":
+        desc: "Nearby places to purchase coffee"
+        type: str
+      "paused":
+        desc: "True if site is paused from being used"
+        type: bool
+      "rainy_day":
+        desc: "True if site is adequate for a rainy day"
+        type: bool
+      "low_limit":
+        desc: "The lowest temperature that the site would be comfortable for"
+        type: int
+        range: { min: -50, max: 50 }
+      "high_limit":
+        type: int
+        desc: "The highest temperature that the site would be comfortable for (more suited for indoor locations)"
+        range: { min: -50, max: 50 }
