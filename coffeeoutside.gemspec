@@ -27,5 +27,6 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'icalendar', '= 2.7.1'
   spec.add_dependency 'openweathermap', '= 0.2.3'
+  spec.add_dependency 'rss', '= 0.2.7'
   spec.add_dependency 'twitter', '= 7.0.0'
 end
