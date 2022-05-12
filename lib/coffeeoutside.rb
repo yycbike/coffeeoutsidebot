@@ -7,9 +7,9 @@ require_relative 'coffeeoutside/locations'
 require_relative 'coffeeoutside/weather'
 
 # Dispatchers
-require_relative 'coffeeoutside/dispatchers/json'
-require_relative 'coffeeoutside/dispatchers/ical'
-require_relative 'coffeeoutside/dispatchers/twitter'
+%w[stdout json ical twitter].each do |d|
+  require_relative "coffeeoutside/dispatchers/#{d}"
+end
 
 module CoffeeOutside
   class Error < StandardError; end
@@ -59,7 +59,6 @@ module CoffeeOutside
 
     destructive = config.production?
     location = LocationChooser.new(destructive, forecast).location
-    puts "Chosen location is #{location}"
 
     dispatch = {
       start_time: get_start_time,
@@ -68,6 +67,7 @@ module CoffeeOutside
       location: location,
       production: config.production?
     }
+    StdoutDispatcher.new(dispatch).notify
     JsonDispatcher.new(dispatch).notify
     IcalDispatcher.new(dispatch).notify
     TwitterDispatcher.new(dispatch.merge(config.dispatchers['twitter'])).notify
