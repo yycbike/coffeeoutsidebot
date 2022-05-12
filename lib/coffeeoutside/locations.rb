@@ -127,11 +127,11 @@ module CoffeeOutside
   class PriorLocationsFile
     def initialize(filename = './prior_locations.yaml')
       @filename = filename
-      if File.exist? filename
-        @locations = YAML.load_file(filename) || []
-      else
-        @locations = []
-      end
+      @locations = if File.exist? filename
+                     YAML.load_file(filename) || []
+                   else
+                     []
+                   end
     end
 
     def previous_locations(n = 5)
