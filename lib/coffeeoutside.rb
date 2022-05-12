@@ -51,7 +51,6 @@ module CoffeeOutside
   def main
     config = Config.new
     if config.production?
-      puts config.openweathermap
       owm = OWM.new config.openweathermap
       forecast = owm.get_forecast
     else
