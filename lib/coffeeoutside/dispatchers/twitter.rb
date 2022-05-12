@@ -17,7 +17,7 @@ module CoffeeOutside
 
       # Send location tweet
       t = client.update location_tweet_msg
-      puts t
+      # puts t
 
       # Send followup tweets
       # client.update('test', { in_reply_to_status_id: t.id }) if t.id
