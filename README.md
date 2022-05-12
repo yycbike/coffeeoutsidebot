@@ -1,13 +1,15 @@
 # CoffeeOutsideBot
 
-The CoffeeOutsideBot is designed to pick a location in the city for the
-#yycbike crowd to meet and enjoy some hot coffee (or tea!).
+The CoffeeOutsideBot is designed to pick a location in the city
+for the #yycbike crowd to meet and enjoy some hot coffee (or tea!).
 
 ## Installation
 
 ```
 git clone https://github.com/yycbike/coffeeoutsidebot.git
-go build
+cd coffeeoutsidebot
+bundle install
+bundle exec bin/coffeeoutsidebot
 ```
 
 ## Twitter integration
@@ -28,7 +30,7 @@ https://coffeeoutside.bike/yyc.rss
 To have the coffeeoutsidebot fire regularly, set up a cron job
 
 ```
-0 17 * * 3  pushd /path/to/coffeeoutsidebot && /path/to/coffeeoutsidebot/coffeeoutsidebot
+0 17 * * 3  pushd /path/to/coffeeoutsidebot && bundle exec ruby bin/coffeeoutsidebot
 ```
 
 ## Contributing
