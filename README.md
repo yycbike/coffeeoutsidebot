@@ -20,6 +20,10 @@ You can get an API key at https://openweathermap.org/price
 An .ics file is auto generated. The current bot's version can be found at
 https://coffeeoutside.bike/yyc.ics
 
+## RSS integration
+You can add the bot to your favourite RSS reader with
+https://coffeeoutside.bike/yyc.rss
+
 ## Cron job
 To have the coffeeoutsidebot fire regularly, set up a cron job
 
