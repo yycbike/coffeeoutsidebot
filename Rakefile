@@ -13,4 +13,8 @@ require 'rubocop/rake_task'
 
 RuboCop::RakeTask.new
 
-task default: %i[test rubocop]
+task :kwalify do
+  sh 'kwalify -f locations.schema.yaml locations.yaml'
+end
+
+task default: %i[test rubocop kwalify]
