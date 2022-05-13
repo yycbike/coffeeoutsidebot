@@ -7,3 +7,4 @@ override.yaml
 prior_locations.yaml
 yyc.json
 yyc.rss
+*.gem
