@@ -13,7 +13,7 @@ group :development, optional: true do
   # TODO: submit Ruby 3.0 fixes upstream
   gem 'guard'
   gem 'guard-minitest'
-  gem 'kwalify', '= 0.7.2'
+  gem 'dc-kwalify', '~> 1.0.0'
   gem 'minitest'
   gem 'rake'
 
