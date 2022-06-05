@@ -113,7 +113,7 @@
   low_limit: -5
   url: http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/James-Short-Park.aspx
 - name: Lougheed House Beaulieu Gardens
-  low_limit: -5
+  low_limit: -2
   url: http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Beaulieu-Gardens.aspx
 - name: McHugh Bluff
   low_limit: 0
