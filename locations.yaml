@@ -64,6 +64,16 @@
 - name: Connaught Park
   low_limit: -15
   url: http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Connaught-Park.aspx
+- name: Gladstone Pocket Park
+  address: TODO
+  low_limit: -1
+  url: TODO
+  paused: true
+- name: Calgary Central Library Park
+  address: TODO
+  low_limit: -1
+  url: TODO
+  paused: true
 - name: Containr Park
   address: TODO
   low_limit: -15
@@ -122,6 +132,9 @@
 - name: Munro Park
   url: TODO
   paused: true
+- name: City Hall municipal building
+  url: TODO
+  paused: true
 - low_limit: 10
   url: http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Olympic-Plaza.aspx
   name: Olympic Plaza
@@ -178,6 +191,12 @@
   url: https://www.soughtxfound.coffee
   high_limit: -3
   address: 916 Centre Street North
+  rainy_day: true
+  paused: true
+- name: Muze Coffeehouse
+  url: TODO
+  high_limit: -3
+  address: TODO
   rainy_day: true
   paused: true
 - low_limit: 10
