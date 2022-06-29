@@ -69,16 +69,14 @@
   low_limit: -1
   url: TODO
   paused: true
-- name: Calgary Central Library Park
-  address: TODO
+- name: Central Library Park (3rd St 9th Ave corner park)
+  address: 800 3 Street SE
   low_limit: -1
-  url: TODO
-  paused: true
+  url: https://calgarylibrary.ca/your-library/locations/cent/
 - name: Containr Park
-  address: TODO
+  address: 1020 2 Ave NW
   low_limit: -15
-  url: TODO
-  paused: true
+  url: https://springboardperformance.com/containr
 - name: East Village Music Pavilion
   url: https://www.evexperience.com/music-pavilion
   low_limit: -10
