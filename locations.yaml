@@ -73,6 +73,7 @@
   address: 800 3 Street SE
   low_limit: -1
   url: https://calgarylibrary.ca/your-library/locations/cent/
+  rainy_day: true
 - name: Containr Park
   address: 1020 2 Ave NW
   low_limit: -15
