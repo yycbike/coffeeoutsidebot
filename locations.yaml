@@ -35,7 +35,7 @@
   high_limit: 0
   name: "@monogramco"
   rainy_day: true
-- name: Barb Scott Park
+- name: Barb Scott Park (by 13th Ave tables)
   url: http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Barb-Scott-Park.aspx
   low_limit: -15
 - name: Buckmaster Park
@@ -55,9 +55,8 @@
   paused: true
 - name: CNIB Fragrant Garden
   address: 10 11A St NE
-  low_limit: 5
-  url: TODO
-  paused: true
+  low_limit: 10
+  url: https://goo.gl/maps/2x2rRGgpdCdBG7am8
 - name: Central Memorial Park
   low_limit: -15
   url: http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Central-Memorial-Park.aspx
@@ -124,13 +123,14 @@
 - name: Lougheed House Beaulieu Gardens
   low_limit: -2
   url: http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Beaulieu-Gardens.aspx
-- name: McHugh Bluff
-  low_limit: 0
-  url: TODO
-  paused: true
+- name: Rosedale Dog Park (benches at top of bluff)
+  address: 1103 10 St NW
+  low_limit: 5
+  url: https://goo.gl/maps/Rpf5WTGQzyMkWSYY9
 - name: Munro Park
-  url: TODO
-  paused: true
+  address: 425 18 Ave NE
+  url: https://www.calgary.ca/csps/parks/locations/ne-parks/munro-park.html
+  low_limit: 20
 - name: City Hall municipal building
   url: TODO
   paused: true
