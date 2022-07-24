@@ -12,14 +12,6 @@ end
 group :development, optional: true do
   # TODO: submit Ruby 3.0 fixes upstream
   gem 'dc-kwalify', '~> 1.0.0'
-  gem 'guard'
+  gem 'dc-devtools'
   gem 'guard-minitest'
-  gem 'minitest'
-  gem 'rake'
-
-  # soon
-  gem 'rubocop'
-  gem 'rubocop-minitest'
-  gem 'rubocop-rake'
-  # gem 'guard-rubocop'
 end
