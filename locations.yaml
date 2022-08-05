@@ -181,6 +181,10 @@
   address: 314 10th St NW
   rainy_day: true
   paused: true
+- name: Royal Sunalta Park (by playground)
+  low_limit: 5
+  address: 302 Sharon Ave SW
+  url: https://goo.gl/maps/JENurv2NNhDrk6Mu6
 - name: Societe Coffee Lounge
   high_limit: -3
   address: 1223 11 Ave SW
