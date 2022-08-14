@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "helper"
+require "test_helper"
 
 class CoffeeOutsideTest < Minitest::Test
   def test_rainy_day_location
