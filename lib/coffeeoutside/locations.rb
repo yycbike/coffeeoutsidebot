@@ -134,8 +134,8 @@ module CoffeeOutside
                    end
     end
 
-    def previous_locations(n = 5)
-      @locations.last n
+    def previous_locations(n_locations = 5)
+      @locations.last n_locations
     end
 
     def append_location(location)

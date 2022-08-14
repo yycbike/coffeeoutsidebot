@@ -8,7 +8,7 @@ module CoffeeOutside
       @city_id = config["city_id"]
       @api_key = config["api_key"]
 
-      get_forecast
+      forecast
     end
 
     def api_call
@@ -16,7 +16,7 @@ module CoffeeOutside
       api.forecast(@city_id)
     end
 
-    def get_forecast
+    def forecast
       # TODO: this looks wrong, check @time!
       fc = api_call.forecast[2]
       Forecast.new(humidity: fc.humidity, temperature: fc.temperature)
