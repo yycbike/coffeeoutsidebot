@@ -32,13 +32,10 @@ module CoffeeOutside
 
     def weather_appropriate?(forecast)
       # TODO: stderr reasons?
-      if forecast.rainy? && !@rainy_day
-        return false
-      elsif @low_limit && (forecast.temperature < @low_limit)
-        return false
-      elsif @high_limit && (forecast.temperature > @high_limit)
-        return false
-      end
+
+      return false if (forecast.rainy? && !@rainy_day) ||
+                      (@low_limit && (forecast.temperature < @low_limit)) ||
+                      (@high_limit && (forecast.temperature > @high_limit))
 
       true
     end
@@ -57,7 +54,7 @@ module CoffeeOutside
       y.each do |l|
         @locations.append Location.new(l)
       end
-      @locations
+      @locations # rubocop:disable Lint/Void
     end
   end
 
@@ -87,7 +84,7 @@ module CoffeeOutside
   class LocationChooser
     attr_reader :location
 
-    def initialize(destructive = false, forecast)
+    def initialize(forecast, destructive: false)
       @location = nil
       of = OverrideFile.new
       plf = PriorLocationsFile.new
@@ -120,7 +117,7 @@ module CoffeeOutside
       # Append to prior locations list
       plf.append_location @location if destructive
 
-      @location
+      @location # rubocop:disable Lint/Void
     end
   end
 

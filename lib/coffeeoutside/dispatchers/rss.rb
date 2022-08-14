@@ -19,7 +19,7 @@ module CoffeeOutside
         maker.channel.updated = Time.now.to_s
         maker.channel.about = "https://coffeeoutside.bike/yyc.rss"
         maker.channel.link = "https://coffeeoutside.bike/yyc.rss"
-        maker.channel.description = "CoffeeOutside is a weekly meetup where Calgarians bike/walk/run/rollerblade to a location, drink coffee/tea/some hot or cold beverage, and shoot the breeze"
+        maker.channel.description = "CoffeeOutside is a weekly meetup where Calgarians bike/walk/run/rollerblade to a location, drink coffee/tea/some hot or cold beverage, and shoot the breeze" # rubocop:disable Layout/LineLength
         maker.channel.title = "CoffeeOutside"
 
         maker.items.new_item do |item|

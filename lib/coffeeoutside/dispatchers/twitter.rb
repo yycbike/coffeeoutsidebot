@@ -16,7 +16,7 @@ module CoffeeOutside
       end
 
       # Send location tweet
-      t = client.update location_tweet_msg
+      t = client.update location_tweet_msg # rubocop:disable Lint/UselessAssignment
       # puts t
 
       # Send followup tweets

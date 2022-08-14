@@ -2,6 +2,6 @@
 # frozen_string_literal: true
 
 require "coffeeoutside"
-include CoffeeOutside
+include CoffeeOutside # rubocop:disable Style/MixinUsage
 
 CoffeeOutside.main

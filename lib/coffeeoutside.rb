@@ -58,7 +58,7 @@ module CoffeeOutside
     end
 
     destructive = config.production?
-    location = LocationChooser.new(destructive, forecast).location
+    location = LocationChooser.new(forecast, destructive).location
 
     dispatch = {
       start_time: start_time,
