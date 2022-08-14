@@ -24,10 +24,10 @@ module CoffeeOutside
     end
 
     def notify_debug
-      puts "consumer_key        = #{@params['consumer_key']}"
-      puts "consumer_secret     = #{@params['consumer_secret']}"
-      puts "access_token        = #{@params['token']}"
-      puts "access_token_secret = #{@params['token_secret']}"
+      puts "consumer_key        = #{@params["consumer_key"]}"
+      puts "consumer_secret     = #{@params["consumer_secret"]}"
+      puts "access_token        = #{@params["token"]}"
+      puts "access_token_secret = #{@params["token_secret"]}"
       puts location_tweet_msg
       puts "\n"
     end

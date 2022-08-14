@@ -24,7 +24,7 @@ module CoffeeOutside
 
         maker.items.new_item do |item|
           item.link = @location.url if @location.url
-          item.title = "Location for #{@start_time.strftime('%Y-%m-%d')}: #{@location.name}"
+          item.title = "Location for #{@start_time.strftime("%Y-%m-%d")}: #{@location.name}"
           item.description = generate_description
           item.updated = Time.now.to_s
         end
