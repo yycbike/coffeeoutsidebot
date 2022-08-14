@@ -1,18 +1,18 @@
 # frozen_string_literal: false
 
-require_relative 'dispatcher'
-require 'json'
-require 'twitter'
+require_relative "dispatcher"
+require "json"
+require "twitter"
 
 module CoffeeOutside
   class TwitterDispatcher < DispatcherBase
     def notify_production
       # Configure client
       client = Twitter::REST::Client.new do |config|
-        config.consumer_key        = @params['consumer_key']
-        config.consumer_secret     = @params['consumer_secret']
-        config.access_token        = @params['token']
-        config.access_token_secret = @params['token_secret']
+        config.consumer_key        = @params["consumer_key"]
+        config.consumer_secret     = @params["consumer_secret"]
+        config.access_token        = @params["token"]
+        config.access_token_secret = @params["token_secret"]
       end
 
       # Send location tweet
@@ -36,7 +36,7 @@ module CoffeeOutside
       str = "This week's #CoffeeOutside: #{@location.name}"
       str << " #{@location.url}" if @location.url
       str << " (#{@location.address})" if @location.address
-      str << ', see you there! #yycbike'
+      str << ", see you there! #yycbike"
       str
     end
 

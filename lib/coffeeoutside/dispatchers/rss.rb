@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require_relative 'dispatcher'
-require 'rss'
+require_relative "dispatcher"
+require "rss"
 
 module CoffeeOutside
   class RssDispatcher < DispatcherBase
@@ -13,14 +13,14 @@ module CoffeeOutside
     end
 
     def generate_rss_string
-      RSS::Maker.make('2.0') do |maker|
-        maker.channel.language = 'en'
-        maker.channel.author = 'CoffeeOutsideBot'
+      RSS::Maker.make("2.0") do |maker|
+        maker.channel.language = "en"
+        maker.channel.author = "CoffeeOutsideBot"
         maker.channel.updated = Time.now.to_s
-        maker.channel.about = 'https://coffeeoutside.bike/yyc.rss'
-        maker.channel.link = 'https://coffeeoutside.bike/yyc.rss'
-        maker.channel.description = 'CoffeeOutside is a weekly meetup where Calgarians bike/walk/run/rollerblade to a location, drink coffee/tea/some hot or cold beverage, and shoot the breeze'
-        maker.channel.title = 'CoffeeOutside'
+        maker.channel.about = "https://coffeeoutside.bike/yyc.rss"
+        maker.channel.link = "https://coffeeoutside.bike/yyc.rss"
+        maker.channel.description = "CoffeeOutside is a weekly meetup where Calgarians bike/walk/run/rollerblade to a location, drink coffee/tea/some hot or cold beverage, and shoot the breeze"
+        maker.channel.title = "CoffeeOutside"
 
         maker.items.new_item do |item|
           item.link = @location.url if @location.url
@@ -32,7 +32,7 @@ module CoffeeOutside
     end
 
     def notify_production
-      i = File.open('yyc.rss', 'w')
+      i = File.open("yyc.rss", "w")
       i.write(generate_rss_string)
     end
 

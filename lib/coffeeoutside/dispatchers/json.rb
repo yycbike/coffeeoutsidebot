@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require_relative 'dispatcher'
-require 'json'
+require_relative "dispatcher"
+require "json"
 
 module CoffeeOutside
   class JsonDispatcher < DispatcherBase
@@ -14,7 +14,7 @@ module CoffeeOutside
     end
 
     def notify_production
-      i = File.open('yyc.json', 'w')
+      i = File.open("yyc.json", "w")
       i.write(generate_json_blob)
     end
 

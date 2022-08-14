@@ -1,18 +1,18 @@
 # frozen_string_literal: true
 
-require 'openweathermap'
+require "openweathermap"
 
 module CoffeeOutside
   class OWM
     def initialize(config)
-      @city_id = config['city_id']
-      @api_key = config['api_key']
+      @city_id = config["city_id"]
+      @api_key = config["api_key"]
 
       get_forecast
     end
 
     def api_call
-      api = OpenWeatherMap::API.new(@api_key, 'en', 'metric')
+      api = OpenWeatherMap::API.new(@api_key, "en", "metric")
       api.forecast(@city_id)
     end
 

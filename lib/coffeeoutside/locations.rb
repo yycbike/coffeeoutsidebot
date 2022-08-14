@@ -1,26 +1,26 @@
 # frozen_string_literal: true
 
-require 'yaml'
+require "yaml"
 
 module CoffeeOutside
   class Location
     attr_reader :name, :address, :url, :nearby_coffee
 
     def initialize(params)
-      if params['name']
-        @name = params['name']
+      if params["name"]
+        @name = params["name"]
       else
-        raise 'Location class requires name key'
+        raise "Location class requires name key"
       end
-      @paused = params['paused'] || false
-      @nearby_coffee = params['nearby_coffee'] || []
-      @url = params['url'] if params['url']
-      @address = params['address'] if params['address']
+      @paused = params["paused"] || false
+      @nearby_coffee = params["nearby_coffee"] || []
+      @url = params["url"] if params["url"]
+      @address = params["address"] if params["address"]
 
       # Forecast related
-      @rainy_day = params['rainy_day'] || false
-      @high_limit = params['high_limit'] if params['high_limit']
-      @low_limit = params['low_limit'] if params['low_limit']
+      @rainy_day = params["rainy_day"] || false
+      @high_limit = params["high_limit"] if params["high_limit"]
+      @low_limit = params["low_limit"] if params["low_limit"]
 
       # Save params for any dispatcher-specific values
       @params = params
@@ -51,7 +51,7 @@ module CoffeeOutside
   class LocationFile
     attr_reader :locations
 
-    def initialize(filename = './locations.yaml')
+    def initialize(filename = "./locations.yaml")
       y = YAML.load_file(filename)
       @locations = []
       y.each do |l|
@@ -64,7 +64,7 @@ module CoffeeOutside
   class OverrideFile
     attr_reader :location
 
-    def initialize(filename = './override.yaml')
+    def initialize(filename = "./override.yaml")
       @filename = filename
       if ::File.exist? @filename
         @override = true
@@ -111,7 +111,7 @@ module CoffeeOutside
         locations.keep_if { |l| l.weather_appropriate? forecast }
 
         # Raise if no locations remaining
-        raise 'No locations remaining!' if locations.empty?
+        raise "No locations remaining!" if locations.empty?
 
         # Pick random location
         @location = locations.sample
@@ -125,7 +125,7 @@ module CoffeeOutside
   end
 
   class PriorLocationsFile
-    def initialize(filename = './prior_locations.yaml')
+    def initialize(filename = "./prior_locations.yaml")
       @filename = filename
       @locations = if File.exist? filename
                      YAML.load_file(filename) || []
@@ -140,7 +140,7 @@ module CoffeeOutside
 
     def append_location(location)
       @locations.append location.name
-      f = File.open(@filename, 'w')
+      f = File.open(@filename, "w")
       f.write(YAML.dump(@locations))
     end
   end

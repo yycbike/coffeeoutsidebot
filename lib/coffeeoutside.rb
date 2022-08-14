@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-require 'yaml'
-require 'date'
-require_relative 'coffeeoutside/version'
-require_relative 'coffeeoutside/locations'
-require_relative 'coffeeoutside/weather'
+require "yaml"
+require "date"
+require_relative "coffeeoutside/version"
+require_relative "coffeeoutside/locations"
+require_relative "coffeeoutside/weather"
 
 # Dispatchers
 %w[stdout json ical rss twitter].each do |d|
@@ -17,11 +17,11 @@ module CoffeeOutside
   class Config
     attr_reader :dispatchers, :openweathermap
 
-    def initialize(config_file = 'config.yaml')
+    def initialize(config_file = "config.yaml")
       config = YAML.load_file(config_file)
-      @production = config['production']
-      @dispatchers = config['dispatchers']
-      @openweathermap = config['openweathermap']
+      @production = config["production"]
+      @dispatchers = config["dispatchers"]
+      @openweathermap = config["openweathermap"]
     end
 
     def production?
@@ -71,6 +71,6 @@ module CoffeeOutside
     JsonDispatcher.new(dispatch).notify
     RssDispatcher.new(dispatch).notify
     IcalDispatcher.new(dispatch).notify
-    TwitterDispatcher.new(dispatch.merge(config.dispatchers['twitter'])).notify
+    TwitterDispatcher.new(dispatch.merge(config.dispatchers["twitter"])).notify
   end
 end

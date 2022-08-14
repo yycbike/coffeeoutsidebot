@@ -1,14 +1,14 @@
 # frozen_string_literal: true
 
-require 'helper'
+require "helper"
 
 class CoffeeOutsideTest < Minitest::Test
   def test_location_tweet_msg
     dispatcher = ::CoffeeOutside::TwitterDispatcher.new({
                                                           location: ::CoffeeOutside::Location.new(
-                                                            'name' => 'Tomkins Park',
-                                                            'address' => '17th Ave',
-                                                            'url' => 'https://example.org'
+                                                            "name" => "Tomkins Park",
+                                                            "address" => "17th Ave",
+                                                            "url" => "https://example.org"
                                                           )
                                                         })
     assert_equal dispatcher.location_tweet_msg,
@@ -16,8 +16,8 @@ class CoffeeOutsideTest < Minitest::Test
 
     dispatcher = ::CoffeeOutside::TwitterDispatcher.new({
                                                           location: ::CoffeeOutside::Location.new(
-                                                            'name' => 'Tomkins Park',
-                                                            'url' => 'https://example.org'
+                                                            "name" => "Tomkins Park",
+                                                            "url" => "https://example.org"
                                                           )
                                                         })
     assert_equal dispatcher.location_tweet_msg,
@@ -25,7 +25,7 @@ class CoffeeOutsideTest < Minitest::Test
 
     dispatcher = ::CoffeeOutside::TwitterDispatcher.new({
                                                           location: ::CoffeeOutside::Location.new(
-                                                            'name' => 'Tomkins Park'
+                                                            "name" => "Tomkins Park"
                                                           )
                                                         })
     assert_equal dispatcher.location_tweet_msg, "This week's #CoffeeOutside: Tomkins Park, see you there! #yycbike"

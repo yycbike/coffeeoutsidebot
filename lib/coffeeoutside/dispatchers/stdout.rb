@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative 'dispatcher'
+require_relative "dispatcher"
 
 module CoffeeOutside
   class StdoutDispatcher < DispatcherBase

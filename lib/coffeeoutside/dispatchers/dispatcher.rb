@@ -23,7 +23,7 @@ module CoffeeOutside
     end
 
     def notify_production
-      raise 'notify_production must be overridden'
+      raise "notify_production must be overridden"
     end
 
     def debug_method
@@ -33,7 +33,7 @@ module CoffeeOutside
     end
 
     def notify_debug
-      raise 'notify_production must be overridden'
+      raise "notify_production must be overridden"
     end
   end
 end
