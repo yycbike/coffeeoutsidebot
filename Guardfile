@@ -6,5 +6,4 @@ guard :rake, task: "default" do
   watch(%r{^test/test_(.*)\.rb$})
   watch(%r{^lib/coffeeoutside/(.*)\.rb$})
   watch(%r{^lib/coffeeoutside\.rb$})
-  watch(%r{^test/helper\.rb$})
 end
