@@ -1,5 +1,7 @@
+*.gem
 *.ics
 /.bundle
+/coverage/
 /vendor
 Gemfile.lock
 config.yaml
@@ -7,4 +9,3 @@ override.yaml
 prior_locations.yaml
 yyc.json
 yyc.rss
-*.gem
