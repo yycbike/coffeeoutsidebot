@@ -100,17 +100,20 @@ module CoffeeOutside
         # Remove paused locations
         locations.delete_if(&:paused?)
 
-        # Remove previously selected locations
-        prior_locations = plf.previous_locations
-        locations.delete_if { |l| prior_locations.include? l.name }
-
         # Delete locations that don't meet forecast criteria
         locations.keep_if { |l| l.weather_appropriate? forecast }
 
         # Raise if no locations remaining
         raise "No locations remaining!" if locations.empty?
 
-        # Pick random location
+        # Remove previously selected locations
+        prior_locations = plf.previous_locations
+        while !prior_locations.empty? && locations.count > 1
+          pl = prior_locations.pop(locations.count - 1)
+          locations.delete_if { |l| pl.include? l.name }
+        end
+
+        # Pick random location if more than one remaining
         @location = locations.sample
       end
 
@@ -131,8 +134,8 @@ module CoffeeOutside
                    end
     end
 
-    def previous_locations(n_locations = 5)
-      @locations.last n_locations
+    def previous_locations
+      @locations
     end
 
     def append_location(location)
