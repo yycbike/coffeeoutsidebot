@@ -8,6 +8,14 @@ class CoffeeOutsideTest < Minitest::Test
       [
         {
           "name" => "Tomkins Park",
+          "location_hint" => "by the stage",
+          "url" => "https://example.org"
+        },
+        "This week's #CoffeeOutside: Tomkins Park (by the stage) https://example.org, see you there! #yycbike"
+      ],
+      [
+        {
+          "name" => "Tomkins Park",
           "address" => "17th Ave",
           "url" => "https://example.org"
         },

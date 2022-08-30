@@ -68,7 +68,8 @@
   low_limit: -1
   url: TODO
   paused: true
-- name: Central Library Park (3rd St 9th Ave corner park)
+- name: Central Library Park
+  location_hint: 3rd St 9th Ave corner park
   address: 800 3 Street SE
   low_limit: -1
   url: https://calgarylibrary.ca/your-library/locations/cent/
@@ -103,11 +104,12 @@
 - name: Haultain Park
   low_limit: -15
   url: http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Haultain-Park.aspx
-- name: High Park (walk your bike up)
+- name: High Park
+  location_hint: walk your bike up
   low_limit: 0
   url: https://www.beltlineyyc.ca/highparkyyc
 - name: Horsy Park
-  low_limit: 10
+  low_limit: 15
   url: https://goo.gl/maps/ido1KAcqdJGtkeVN8
 - name: Humpy Hollow Park
   url: https://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Humpy-Hollow-Park.aspx
@@ -181,7 +183,8 @@
   address: 314 10th St NW
   rainy_day: true
   paused: true
-- name: Royal Sunalta Park (by playground)
+- name: Royal Sunalta Park
+  location_hint: by lower swings
   low_limit: 5
   address: 302 Sharon Ave SW
   url: https://goo.gl/maps/JENurv2NNhDrk6Mu6

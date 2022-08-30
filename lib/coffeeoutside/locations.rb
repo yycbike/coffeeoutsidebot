@@ -4,7 +4,7 @@ require "yaml"
 
 module CoffeeOutside
   class Location
-    attr_reader :name, :address, :url, :nearby_coffee
+    attr_reader :name, :location_hint, :address, :url, :nearby_coffee
 
     def initialize(params)
       if params["name"]
@@ -16,6 +16,7 @@ module CoffeeOutside
       @nearby_coffee = params["nearby_coffee"] || []
       @url = params["url"] if params["url"]
       @address = params["address"] if params["address"]
+      @location_hint = params["location_hint"] if params["location_hint"]
 
       # Forecast related
       @rainy_day = params["rainy_day"] || false

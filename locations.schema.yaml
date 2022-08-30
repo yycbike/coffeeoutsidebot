@@ -7,6 +7,9 @@ sequence:
         desc: "Name of the meetup location"
         type: str
         required: yes
+      "location_hint":
+        desc: "Human readable 'hint' where the meetup is"
+        type: str
       "url":
         desc: "URL for the site. Order of preference: City of Calgary link (if park), Cafe website (if inside), Google Maps URL"
         type: str
