@@ -54,11 +54,11 @@ module CoffeeOutside
       owm = OWM.new config.openweathermap
       forecast = owm.forecast
     else
+      # stub a forecast in since OWM is rate-limited
       forecast = Forecast.new(humidity: 0, temperature: 10)
     end
 
-    destructive = config.production?
-    location = LocationChooser.new(forecast, destructive).location
+    location = LocationChooser.new(forecast, destructive: config.production?).location
 
     dispatch = {
       start_time: start_time,
