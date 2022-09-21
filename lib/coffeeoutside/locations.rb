@@ -108,7 +108,7 @@ module CoffeeOutside
         raise "No locations remaining!" if locations.empty?
 
         # Remove previously selected locations
-        prior_locations = plf.previous_locations
+        prior_locations = plf.previous_locations.dup
         while !prior_locations.empty? && locations.count > 1
           pl = prior_locations.pop(locations.count - 1)
           locations.delete_if { |l| pl.include? l.name }
