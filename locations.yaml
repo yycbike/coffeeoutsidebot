@@ -35,7 +35,8 @@
   high_limit: 0
   name: "@monogramco"
   rainy_day: true
-- name: Barb Scott Park (by 13th Ave tables)
+- name: Barb Scott Park
+  location_hint: by 13th Ave tables
   url: http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Barb-Scott-Park.aspx
   low_limit: -15
 - name: Buckmaster Park
@@ -98,9 +99,10 @@
 - name: Harley Hotchkiss Gardens
   low_limit: -5
   address: 611 4 St SW
-- name: Harvie Passage (Weir)
+- name: Harvie Passage Lookout
+  location_hint: by the weir entrance
   low_limit: 0
-  url: https://www.google.ca/maps/place/Harvie+Passage,+Calgary,+AB/@51.0439438,-114.0137959,15z/data=!4m2!3m1!1s0x53717ac80a6f6a1b:0xe7a331ec29495195
+  url: https://goo.gl/maps/jZG2saNkY1AnhbY29
 - name: Haultain Park
   low_limit: -15
   url: http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Haultain-Park.aspx
@@ -125,7 +127,8 @@
 - name: Lougheed House Beaulieu Gardens
   low_limit: -2
   url: http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Beaulieu-Gardens.aspx
-- name: Rosedale Dog Park (benches at top of bluff)
+- name: Rosedale Dog Park
+  location_hint: benches at top of bluff
   address: 1103 10 St NW
   low_limit: 5
   url: https://goo.gl/maps/Rpf5WTGQzyMkWSYY9
@@ -154,7 +157,8 @@
 - name: Reader Rock Garden
   low_limit: 10
   url: http://www.calgary.ca/CSPS/Parks/Pages/Locations/SE-parks/Reader-Rock-Garden.aspx
-- name: Riley Park (Stage)
+- name: Riley Park
+  location_hint: Stage
   url: https://www.calgary.ca/csps/parks/locations/nw-parks/riley-park.html
   low_limit: -10
   rainy_day: true
