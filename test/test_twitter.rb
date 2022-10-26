@@ -3,6 +3,7 @@
 require "test_helper"
 
 class CoffeeOutsideTest < Minitest::Test
+  include CoffeeOutside
   def test_location_tweet_msg
     [
       [
@@ -31,9 +32,9 @@ class CoffeeOutsideTest < Minitest::Test
         "This week's #CoffeeOutside: Tomkins Park, see you there! #yycbike"
       ]
     ].each do |location, string|
-      dispatcher = ::CoffeeOutside::TwitterDispatcher.new(
+      dispatcher = TwitterDispatcher.new(
         {
-          location: ::CoffeeOutside::Location.new(location)
+          location: Location.new(location)
         }
       )
       assert_equal dispatcher.location_tweet_msg,
