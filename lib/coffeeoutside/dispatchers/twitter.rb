@@ -33,7 +33,7 @@ module CoffeeOutside
     end
 
     def location_tweet_msg
-      str = "This week's #CoffeeOutside: #{@location.name}"
+      str = "This week's #CoffeeOutside: #{@location.twitter || @location.name}"
       str << " (#{@location.location_hint})" if @location.location_hint
       str << " #{@location.url}" if @location.url
       str << " (#{@location.address})" if @location.address

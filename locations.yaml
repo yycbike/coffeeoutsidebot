@@ -1,26 +1,31 @@
 ---
-- name: "@LaBoulangerie4"
+- name: La Boulangerie
+  twitter: "@LaBoulangerie4"
   address: 2435 4 St SW
   high_limit: 5
   rainy_day: true
   paused: true
 - high_limit: 5
-  name: "@SidewalkSimmons"
-  url: http://sidewalkcitizenbakery.com/
+  twitter: "@SidewalkSimmons"
+  name: Sidewalk Citizen Bakery (Simmons Building)
+  url: https://sidewalkcitizenbakery.com/
   rainy_day: true
   paused: true
 - url: https://alforno.ca/
-  name: "@AlfornoYYC"
+  twitter: "@AlfornoYYC"
+  name: Alforno
   high_limit: 5
   rainy_day: true
   paused: true
 - url: https://iloveyoucoffeeshop.com/
-  name: "@iloveyoucoffee_"
+  name: I Love You Coffee Shop
+  twitter: "@iloveyoucoffee_"
   high_limit: 5
   rainy_day: true
   paused: true
 - url: http://www.bayaricacafe.ca/
-  name: "@BayaRicaCafe"
+  name: Baya Rica Cafe
+  twitter: "@BayaRicaCafe"
   address: 204 7A Street NE
   high_limit: 5
   rainy_day: true
@@ -33,7 +38,8 @@
   paused: true
 - address: 420 2nd Street SW
   high_limit: 0
-  name: "@monogramco"
+  name: Monogram Coffee
+  twitter: "@monogramco"
   rainy_day: true
 - name: Barb Scott Park
   location_hint: by 13th Ave tables
@@ -44,7 +50,8 @@
   address: 1629 21 Ave SW
 - high_limit: 0
   address: 909 10 St SE
-  name: "@cafegravity"
+  twitter: "@cafegravity"
+  name: Cafe Gravity
   rainy_day: true
   paused: true
 - high_limit: -15

@@ -23,6 +23,14 @@ class CoffeeOutsideTest < Minitest::Test
         "This week's #CoffeeOutside: Tomkins Park https://example.org (17th Ave), see you there! #yycbike"
       ],
       [
+        {
+          "name" => "I Love You Coffee Shop",
+          "twitter" => "@iloveyoucoffee_",
+          "url" => "https://iloveyoucoffeeshop.com"
+        },
+        "This week's #CoffeeOutside: @iloveyoucoffee_ https://iloveyoucoffeeshop.com, see you there! #yycbike"
+      ],
+      [
         { "name" => "Tomkins Park",
           "url" => "https://example.org" },
         "This week's #CoffeeOutside: Tomkins Park https://example.org, see you there! #yycbike"
