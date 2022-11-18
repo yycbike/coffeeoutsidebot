@@ -16,26 +16,25 @@
   name: Alforno
   high_limit: 5
   rainy_day: true
-  paused: true
+  paused: true # Opens 8AM as of 2022-11-17
 - url: https://iloveyoucoffeeshop.com/
   name: I Love You Coffee Shop
   twitter: "@iloveyoucoffee_"
   high_limit: 5
   rainy_day: true
-  paused: true
+  paused: true # Opens 8AM as of 2022-11-17
 - url: http://www.bayaricacafe.ca/
   name: Baya Rica Cafe
   twitter: "@BayaRicaCafe"
   address: 204 7A Street NE
   high_limit: 5
   rainy_day: true
-  paused: true
 - url: https://www.calgaryheritageroastingco.com/
   name: Calgary Heritage Roasting Company
   address: 2020 11 St SE
   high_limit: 5
   rainy_day: true
-  paused: true
+  paused: true # Opens 8AM as of 2022-11-17
 - address: 420 2nd Street SW
   high_limit: 0
   name: Monogram Coffee
@@ -58,7 +57,6 @@
   address: 1613 9th Street SW
   name: Caffe Beano
   rainy_day: true
-  paused: false
 - name: Ca'puccini
   paused: true
 - name: CNIB Fragrant Garden
@@ -93,7 +91,6 @@
 - name: Delta Park
   url: https://www.google.com/maps/place/Delta+Garden/@51.0521029,-114.0786464,17z/
   low_limit: -10
-  rainy_day: false
 - name: DeVille Luxury Coffee
   paused: true
 - name: Enmax Stage on Prince's Island
@@ -194,7 +191,6 @@
   high_limit: 5
   address: 314 10th St NW
   rainy_day: true
-  paused: true
 - name: Royal Sunalta Park
   location_hint: by lower swings
   low_limit: 5
@@ -204,19 +200,18 @@
   high_limit: -3
   address: 1223 11 Ave SW
   rainy_day: true
-  paused: true
 - name: Sought X Found Coffee
   url: https://www.soughtxfound.coffee
   high_limit: -3
   address: 916 Centre Street North
   rainy_day: true
-  paused: true
+  paused: true # Opens 8:30AM as of 2022-11-17
 - name: Muze Coffeehouse
   url: TODO
   high_limit: -3
   address: TODO
   rainy_day: true
-  paused: true
+  paused: true # "temporarily closed" in Google as of 2022-11-17
 - low_limit: 10
   url: http://www.calgary.ca/CSPS/Parks/Pages/Locations/SW-parks/Stanley-Park.aspx
   name: Stanley Park Flower Garden
