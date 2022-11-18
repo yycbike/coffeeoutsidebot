@@ -128,11 +128,10 @@
   url: http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Olympic-Plaza.aspx
   low_limit: -15
   nearby_coffee: Ca'Puccini
-- name: Chinatown 4th Ave Park
+- name: Harmony Park
   low_limit: -5
   address: 115 4 Ave SW
-  # TODO will update City URL once they've picked a name
-  url: https://engage.calgary.ca/tomorrows-chinatown/renameJSP
+  url: https://www.calgary.ca/parks/harmony-park.html
 - name: Lougheed House Beaulieu Gardens
   low_limit: -2
   url: http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Beaulieu-Gardens.aspx
