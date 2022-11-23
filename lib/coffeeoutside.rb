@@ -5,6 +5,7 @@ require "date"
 require_relative "coffeeoutside/version"
 require_relative "coffeeoutside/locations"
 require_relative "coffeeoutside/weather"
+require_relative "coffeeoutside/event_time"
 
 # Dispatchers
 %w[stdout json ical rss twitter].each do |d|
@@ -29,25 +30,6 @@ module CoffeeOutside
     end
   end
 
-  def next_friday
-    # TODO: this is gross...
-    @next_friday ||= Date.today + [5, 4, 3, 2, 1, 7, 6][Date.today.wday]
-  end
-
-  def start_time
-    DateTime.new(
-      next_friday.year, next_friday.month, next_friday.day,
-      7, 30, 0
-    )
-  end
-
-  def end_time
-    DateTime.new(
-      next_friday.year, next_friday.month, next_friday.day,
-      8, 30, 0
-    )
-  end
-
   def main
     config = Config.new
     if config.production?
@@ -61,8 +43,8 @@ module CoffeeOutside
     location = LocationChooser.new(forecast, destructive: config.production?).location
 
     dispatch = {
-      start_time: start_time,
-      end_time: end_time,
+      start_time: EventTime.start_time,
+      end_time: EventTime.end_time,
       forecast: forecast,
       location: location,
       production: config.production?
