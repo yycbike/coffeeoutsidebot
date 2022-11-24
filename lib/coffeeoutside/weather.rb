@@ -4,21 +4,33 @@ require "openweathermap"
 
 module CoffeeOutside
   class OWM
-    def initialize(config)
+    attr_accessor :result
+
+    def initialize(config, time = DateTime.now)
       @city_id = config["city_id"]
       @api_key = config["api_key"]
-
-      forecast
+      @start_time = time
     end
 
     def api_call
       api = OpenWeatherMap::API.new(@api_key, "en", "metric")
-      api.forecast(@city_id)
+      @result = api.forecast(@city_id)
+    end
+
+    def closest_forecast
+      # Doing this as 'The Price Is Right' rules, forecast with the closest
+      # time to the start without going over wins.
+      @result.forecast.reject! { |x| x.time.to_datetime > @start_time }
+      @result.forecast.last
+    end
+
+    def parse_owm_datestring(str)
+      DateTime.strptime(str, "%Y-%m-%d %H-%M-%S")
     end
 
     def forecast
-      # TODO: this looks wrong, check @time!
-      fc = api_call.forecast[2]
+      api_call
+      fc = closest_forecast
       Forecast.new(humidity: fc.humidity, temperature: fc.temperature)
     end
   end

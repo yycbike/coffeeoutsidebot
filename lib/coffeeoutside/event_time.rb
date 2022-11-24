@@ -10,14 +10,16 @@ module CoffeeOutside
     def self.start_time
       DateTime.new(
         next_friday.year, next_friday.month, next_friday.day,
-        7, 30, 0
+        7, 30, 0,
+        "-07:00"
       )
     end
 
     def self.end_time
       DateTime.new(
         next_friday.year, next_friday.month, next_friday.day,
-        8, 30, 0
+        8, 30, 0,
+        "-07:00"
       )
     end
   end
