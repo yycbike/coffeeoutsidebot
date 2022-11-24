@@ -33,7 +33,7 @@ module CoffeeOutside
   def main
     config = Config.new
     if config.production?
-      owm = OWM.new config.openweathermap, time: EventTime.start_time
+      owm = OWM.new config.openweathermap, EventTime.start_time
       forecast = owm.forecast
     else
       # stub a forecast in since OWM is rate-limited
