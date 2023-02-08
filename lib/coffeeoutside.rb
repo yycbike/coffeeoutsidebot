@@ -8,7 +8,7 @@ require_relative "coffeeoutside/weather"
 require_relative "coffeeoutside/event_time"
 
 # Dispatchers
-%w[stdout json ical rss twitter].each do |d|
+%w[stdout json ical rss].each do |d|
   require_relative "coffeeoutside/dispatchers/#{d}"
 end
 
@@ -53,6 +53,5 @@ module CoffeeOutside
     JsonDispatcher.new(dispatch).notify
     RssDispatcher.new(dispatch).notify
     IcalDispatcher.new(dispatch).notify
-    TwitterDispatcher.new(dispatch.merge(config.dispatchers["twitter"])).notify
   end
 end

@@ -4,7 +4,7 @@ require "yaml"
 
 module CoffeeOutside
   class Location
-    attr_reader :name, :location_hint, :address, :url, :nearby_coffee, :twitter
+    attr_reader :name, :location_hint, :address, :url, :nearby_coffee
 
     def initialize(params)
       if params["name"]
@@ -22,7 +22,6 @@ module CoffeeOutside
       @rainy_day = params["rainy_day"] || false
       @high_limit = params["high_limit"] if params["high_limit"]
       @low_limit = params["low_limit"] if params["low_limit"]
-      @twitter = params["twitter"] if params["twitter"]
 
       # Save params for any dispatcher-specific values
       @params = params

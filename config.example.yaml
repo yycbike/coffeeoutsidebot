@@ -1,6 +1,6 @@
 production: false
 dispatchers:
-  twitter:
+  service:
     consumer_secret: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
     consumer_key: xxxxxxxxxxxxxxxxxxxxxxxxxx
     token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx

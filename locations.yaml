@@ -1,31 +1,26 @@
 ---
 - name: La Boulangerie
-  twitter: "@LaBoulangerie4"
   address: 2435 4 St SW
   high_limit: 5
   rainy_day: true
   paused: true
 - high_limit: 5
-  twitter: "@SidewalkSimmons"
   name: Sidewalk Citizen Bakery (Simmons Building)
   url: https://sidewalkcitizenbakery.com/
   rainy_day: true
   paused: true
 - url: https://alforno.ca/
-  twitter: "@AlfornoYYC"
   name: Alforno
   high_limit: 5
   rainy_day: true
   paused: true # Opens 8AM as of 2022-11-17
 - url: https://iloveyoucoffeeshop.com/
   name: I Love You Coffee Shop
-  twitter: "@iloveyoucoffee_"
   high_limit: 5
   rainy_day: true
   paused: true # Opens 8AM as of 2022-11-17
 - url: http://www.bayaricacafe.ca/
   name: Baya Rica Cafe
-  twitter: "@BayaRicaCafe"
   address: 204 7A Street NE
   high_limit: 5
   rainy_day: true
@@ -38,7 +33,6 @@
 - address: 420 2nd Street SW
   high_limit: 0
   name: Monogram Coffee
-  twitter: "@monogramco"
   rainy_day: true
 - name: Barb Scott Park
   location_hint: by 13th Ave tables
@@ -49,7 +43,6 @@
   address: 1629 21 Ave SW
 - high_limit: 0
   address: 909 10 St SE
-  twitter: "@cafegravity"
   name: Cafe Gravity
   rainy_day: true
   paused: true

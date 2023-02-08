@@ -12,9 +12,6 @@ bundle install
 bundle exec bin/coffeeoutsidebot
 ```
 
-## Twitter integration
-You can get the necessary API keys at https://dev.twitter.com/
-
 ## OpenWeatherMap integration
 You can get an API key at https://openweathermap.org/price
 

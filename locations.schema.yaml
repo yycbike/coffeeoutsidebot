@@ -33,6 +33,3 @@ sequence:
         type: int
         desc: "The highest temperature that the site would be comfortable for (more suited for indoor locations)"
         range: { min: -50, max: 50 }
-      "twitter":
-        desc: "Twitter handle of location"
-        type: str
