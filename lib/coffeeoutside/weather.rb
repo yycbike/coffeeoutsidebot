@@ -35,7 +35,7 @@ module CoffeeOutside
     end
   end
 
-  HUMIDITY_LIMIT = 75
+  HUMIDITY_LIMIT = 90
   class Forecast
     def initialize(hash)
       @humidity = hash[:humidity] || 0
