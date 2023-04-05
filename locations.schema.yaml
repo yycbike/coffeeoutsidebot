@@ -1,3 +1,4 @@
+---
 desc: CoffeeOutside location schema
 type: seq
 sequence:
@@ -6,7 +7,7 @@ sequence:
       "name":
         desc: "Name of the meetup location"
         type: str
-        required: yes
+        required: true
       "location_hint":
         desc: "Human readable 'hint' where the meetup is"
         type: str
@@ -28,8 +29,8 @@ sequence:
       "low_limit":
         desc: "The lowest temperature that the site would be comfortable for"
         type: int
-        range: { min: -50, max: 50 }
+        range: {min: -50, max: 50}
       "high_limit":
         type: int
         desc: "The highest temperature that the site would be comfortable for (more suited for indoor locations)"
-        range: { min: -50, max: 50 }
+        range: {min: -50, max: 50}

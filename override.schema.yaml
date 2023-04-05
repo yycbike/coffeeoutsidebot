@@ -1,9 +1,10 @@
+---
 type: map
 mapping:
   "name":
     desc: "Name of the meetup location"
     type: str
-    required: yes
+    required: true
   "url":
     desc: "URL for the site. Order of preference: City of Calgary link (if park), Cafe website (if inside), Google Maps URL"
     type: str

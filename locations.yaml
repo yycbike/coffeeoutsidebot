@@ -13,12 +13,12 @@
   name: Alforno
   high_limit: 5
   rainy_day: true
-  paused: true # Opens 8AM as of 2022-11-17
+  paused: true  # Opens 8AM as of 2022-11-17
 - url: https://iloveyoucoffeeshop.com/
   name: I Love You Coffee Shop
   high_limit: 5
   rainy_day: true
-  paused: true # Opens 8AM as of 2022-11-17
+  paused: true  # Opens 8AM as of 2022-11-17
 - url: http://www.bayaricacafe.ca/
   name: Baya Rica Cafe
   address: 204 7A Street NE
@@ -29,7 +29,7 @@
   address: 2020 11 St SE
   high_limit: 5
   rainy_day: true
-  paused: true # Opens 8AM as of 2022-11-17
+  paused: true  # Opens 8AM as of 2022-11-17
 - address: 420 2nd Street SW
   high_limit: 0
   name: Monogram Coffee
@@ -198,13 +198,13 @@
   high_limit: -3
   address: 916 Centre Street North
   rainy_day: true
-  paused: true # Opens 8:30AM as of 2022-11-17
+  paused: true  # Opens 8:30AM as of 2022-11-17
 - name: Muze Coffeehouse
   url: TODO
   high_limit: -3
   address: TODO
   rainy_day: true
-  paused: true # "temporarily closed" in Google as of 2022-11-17
+  paused: true  # "temporarily closed" in Google as of 2022-11-17
 - low_limit: 10
   url: http://www.calgary.ca/CSPS/Parks/Pages/Locations/SW-parks/Stanley-Park.aspx
   name: Stanley Park Flower Garden
