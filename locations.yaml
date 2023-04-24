@@ -244,3 +244,7 @@
   address: 215 24 Ave SW
   url: https://goo.gl/maps/mNg4SaM1DeBX9V3L6
   name: William Aberhart Park
+- name: 5th Street Square
+  url: https://goo.gl/maps/RqUC8EDDZrssGrCN9
+  low_limit: 8
+  address: 712 5 St SE
