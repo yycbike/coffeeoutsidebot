@@ -114,7 +114,7 @@
   url: https://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Humpy-Hollow-Park.aspx
   low_limit: 10
 - name: Ice Rink at Olympic Plaza
-  high_limit: -2
+  high_limit: -5
   url: http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Olympic-Plaza.aspx
   low_limit: -15
   nearby_coffee: Ca'Puccini
