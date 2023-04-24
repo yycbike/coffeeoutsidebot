@@ -15,7 +15,7 @@ module CoffeeOutside
         e.dtstart = Icalendar::Values::DateTime.new @start_time.strftime(format), "tzid" => tzid
         e.dtend = Icalendar::Values::DateTime.new @end_time.strftime(format), "tzid" => tzid
         e.summary = "CoffeeOutside - #{@location.name}"
-        e.location = @location.name
+        e.location = "#{@location.address || @location.name} #{@location.location_hint}"
       end
       cal.to_ical
     end
