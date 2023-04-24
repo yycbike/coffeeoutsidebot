@@ -10,6 +10,7 @@ Rake::TestTask.new(:test) do |t|
   t.test_files = FileList["test/**/test_*.rb"]
 end
 
+desc "Validate YAML schema"
 task :kwalify do
   sh "kwalify -f locations.schema.yaml locations.yaml"
 end
