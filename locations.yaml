@@ -3,19 +3,20 @@
   address: 2435 4 St SW
   high_limit: 5
   rainy_day: true
-  paused: true
-- high_limit: 5
-  name: Sidewalk Citizen Bakery (Simmons Building)
+  url: https://la-boulangerie-calgary.com/
+- name: Sidewalk Citizen Bakery (Simmons Building)
+  high_limit: 5
   url: https://sidewalkcitizenbakery.com/
   rainy_day: true
-  paused: true
 - url: https://alforno.ca/
   name: Alforno
+  address: 222 7 St SW
   high_limit: 5
   rainy_day: true
   paused: true  # Opens 8AM as of 2022-11-17
 - url: https://iloveyoucoffeeshop.com/
   name: I Love You Coffee Shop
+  address: 348b 14 Ave SW
   high_limit: 5
   rainy_day: true
   paused: true  # Opens 8AM as of 2022-11-17
@@ -33,10 +34,11 @@
 - address: 420 2nd Street SW
   high_limit: 0
   name: Monogram Coffee
+  url: https://monogramcoffee.com/
   rainy_day: true
 - name: Barb Scott Park
   location_hint: by 13th Ave tables
-  url: http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Barb-Scott-Park.aspx
+  url: https://www.calgary.ca/parks/barb-scott-park.html
   low_limit: -15
 - name: Buckmaster Park
   low_limit: 10
@@ -44,8 +46,8 @@
 - high_limit: 0
   address: 909 10 St SE
   name: Cafe Gravity
+  url: https://cafegravity.com/
   rainy_day: true
-  paused: true
 - high_limit: -15
   address: 1613 9th Street SW
   name: Caffe Beano
@@ -189,6 +191,7 @@
   high_limit: 5
   address: 314 10th St NW
   rainy_day: true
+  url: https://roasterie.com
 - name: Royal Sunalta Park
   location_hint: by lower swings
   low_limit: 5
