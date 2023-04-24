@@ -140,6 +140,11 @@
 - low_limit: 10
   url: http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Olympic-Plaza.aspx
   name: Olympic Plaza
+- name: Nellie Breen Park
+  low_limit: -2
+  rainy_day: true
+  url: https://goo.gl/maps/Zgz1QVSQ2jUyQF3H7
+  address: 703 14 St SE, Calgary, AB T2G 3J9
 - url: http://calgary.ca/CSPS/Parks/Pages/Locations/NW-parks/Riley-Park.aspx
   low_limit: 0
   name: Patrick Burns Rock Garden at Riley Park
