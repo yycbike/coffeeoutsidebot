@@ -8,7 +8,7 @@ require_relative "coffeeoutside/weather"
 require_relative "coffeeoutside/event_time"
 
 # Dispatchers
-%w[stdout json ical rss].each do |d|
+Dir.glob("*.rb", base: "#{__dir__}/coffeeoutside/dispatchers/").each do |d|
   require_relative "coffeeoutside/dispatchers/#{d}"
 end
 
@@ -49,9 +49,10 @@ module CoffeeOutside
       location: location,
       production: config.production?
     }
-    StdoutDispatcher.new(dispatch).notify
-    JsonDispatcher.new(dispatch).notify
-    RssDispatcher.new(dispatch).notify
-    IcalDispatcher.new(dispatch).notify
+
+    CoffeeOutside::Dispatchers.constants.each do |d|
+      dispatch.merge!(config.dispatchers[d.to_s]) if config.dispatchers[d.to_s]
+      ::CoffeeOutside::Dispatchers.const_get(d).new(dispatch).notify
+    end
   end
 end
