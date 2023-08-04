@@ -207,7 +207,6 @@
   high_limit: -3
   address: 916 Centre Street North
   rainy_day: true
-  paused: true  # Opens 8:30AM as of 2022-11-17
 - name: Muze Coffeehouse
   url: TODO
   high_limit: -3
