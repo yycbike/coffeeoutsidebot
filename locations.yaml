@@ -182,9 +182,9 @@
 - url: https://goo.gl/maps/yzMjfBj4JrKQxkvu6
   low_limit: 0
   name: South Mount Royal Park
-- url: http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Shaw-Millennium-Park.aspx
+- name: Millenium Park
+  url: https://www.calgary.ca/parks/millennium-park.html
   low_limit: 0
-  name: Shaw Millenium Park
 - url: http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Sien-Lok-Park.aspx
   low_limit: 0
   name: Sien Lok Park
