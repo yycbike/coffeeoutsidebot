@@ -198,10 +198,11 @@
   low_limit: 5
   address: 302 Sharon Ave SW
   url: https://goo.gl/maps/JENurv2NNhDrk6Mu6
-- name: Societe Coffee Lounge
+- name: Q.Lab Coffee Roasters & Tasting Experience
   high_limit: -3
   address: 1223 11 Ave SW
   rainy_day: true
+  paused: true
 - name: Sought X Found Coffee
   url: https://www.soughtxfound.coffee
   high_limit: -3
