@@ -109,6 +109,7 @@
   location_hint: walk your bike up
   low_limit: 0
   url: https://www.beltlineyyc.ca/highparkyyc
+  paused: true
 - name: Horsy Park
   low_limit: 15
   url: https://goo.gl/maps/ido1KAcqdJGtkeVN8
