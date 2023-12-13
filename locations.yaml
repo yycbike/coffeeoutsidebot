@@ -204,6 +204,11 @@
   address: 1223 11 Ave SW
   rainy_day: true
   paused: true
+- name: Fringe Coffee
+  url: http://www.fringecoffee.ca/
+  low_limit: 8
+  address: 4628 Bowness Rd NW
+  rainy_day: true
 - name: Sought X Found Coffee
   url: https://www.soughtxfound.coffee
   high_limit: -3
