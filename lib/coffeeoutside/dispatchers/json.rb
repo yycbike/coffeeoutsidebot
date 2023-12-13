@@ -11,6 +11,7 @@ module CoffeeOutside
           name: @location.name,
           url: @location.url
         }
+        location[:address] = @location.address if @location.address
         ::JSON.dump({ location: location })
       end
 
