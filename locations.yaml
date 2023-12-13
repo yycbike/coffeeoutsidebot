@@ -209,6 +209,11 @@
   high_limit: -3
   address: 916 Centre Street North
   rainy_day: true
+- name: Ukrainian Coffee House
+  address: 755 5 Ave SW
+  high_limit: -5
+  rainy_day: true
+  url: https://www.instagram.com/ukrainian_coffee_house_calgary/
 - name: Muze Coffeehouse
   url: TODO
   high_limit: -3
