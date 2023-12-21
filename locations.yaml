@@ -43,6 +43,11 @@
 - name: Buckmaster Park
   low_limit: 10
   address: 1629 21 Ave SW
+- high_limit: -2
+  address: 609 8 Ave SW
+  name: Cafe Eight
+  url: https://maps.app.goo.gl/MipmL9cHmTUTF2RSA
+  rainy_day: true
 - high_limit: 0
   address: 909 10 St SE
   name: Cafe Gravity
