@@ -39,7 +39,7 @@
 - name: Barb Scott Park
   location_hint: by 13th Ave tables
   url: https://www.calgary.ca/parks/barb-scott-park.html
-  low_limit: -15
+  low_limit: -8
 - name: Buckmaster Park
   low_limit: 10
   address: 1629 21 Ave SW
@@ -64,10 +64,10 @@
   low_limit: 10
   url: https://goo.gl/maps/2x2rRGgpdCdBG7am8
 - name: Central Memorial Park
-  low_limit: -15
+  low_limit: -8
   url: http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Central-Memorial-Park.aspx
 - name: Connaught Park
-  low_limit: -15
+  low_limit: -8
   url: http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Connaught-Park.aspx
 - name: Gladstone Pocket Park
   address: TODO
@@ -82,20 +82,20 @@
   rainy_day: true
 - name: Containr Park
   address: 1020 2 Ave NW
-  low_limit: -15
+  low_limit: -8
   url: https://springboardperformance.com/containr
 - name: East Village Music Pavilion
   url: https://www.evexperience.com/music-pavilion
-  low_limit: -10
+  low_limit: -5
   rainy_day: true
 - name: Delta Park
   url: https://www.google.com/maps/place/Delta+Garden/@51.0521029,-114.0786464,17z/
-  low_limit: -10
+  low_limit: -5
 - name: DeVille Luxury Coffee
   paused: true
 - name: Enmax Stage on Prince's Island
   url: http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Princes-Island-Park.aspx
-  low_limit: -10
+  low_limit: -5
   rainy_day: true
 - name: Gerry Shaw Gardens
   low_limit: 10
@@ -108,7 +108,7 @@
   low_limit: 0
   url: https://goo.gl/maps/jZG2saNkY1AnhbY29
 - name: Haultain Park
-  low_limit: -15
+  low_limit: -8
   url: http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Haultain-Park.aspx
 - name: High Park
   location_hint: walk your bike up
@@ -172,7 +172,7 @@
 - name: Riley Park
   location_hint: Stage
   url: https://www.calgary.ca/csps/parks/locations/nw-parks/riley-park.html
-  low_limit: -10
+  low_limit: -8
   rainy_day: true
 - name: Rosso Coffee Roasters
   paused: true
@@ -186,7 +186,7 @@
   url: http://www.calgary.ca/CSPS/Parks/Pages/Locations/SW-parks/Sandy-Beach.aspx
   name: Sandy Beach
 - url: https://goo.gl/maps/yzMjfBj4JrKQxkvu6
-  low_limit: 0
+  low_limit: 10
   name: South Mount Royal Park
 - name: Millenium Park
   url: https://www.calgary.ca/parks/millennium-park.html
