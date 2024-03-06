@@ -13,7 +13,7 @@ jobs:
       BUNDLE_WITH: development
     strategy:
       matrix:
-        ruby-version: ['2.5.1', '2.7.0', '3.0', '3.1']
+        ruby-version: ['2.7.0', '3.0', '3.1']
     steps:
     - uses: actions/checkout@v3
     - name: Set up Ruby
