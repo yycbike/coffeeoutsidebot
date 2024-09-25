@@ -127,6 +127,7 @@
   url: http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Olympic-Plaza.aspx
   low_limit: -15
   nearby_coffee: Ca'Puccini
+  paused: true
 - name: Harmony Park
   low_limit: -5
   address: 115 4 Ave SW
@@ -148,6 +149,7 @@
   paused: true
 - low_limit: 10
   url: http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Olympic-Plaza.aspx
+  paused: true
   name: Olympic Plaza
 - name: Nellie Breen Park
   low_limit: -2
