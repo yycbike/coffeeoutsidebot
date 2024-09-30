@@ -121,7 +121,6 @@
 - name: Humpy Hollow Park
   url: https://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Humpy-Hollow-Park.aspx
   low_limit: 10
-  paused: true
 - name: Ice Rink at Olympic Plaza
   high_limit: -5
   url: http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Olympic-Plaza.aspx
@@ -168,6 +167,7 @@
 - low_limit: 3
   url: http://www.calgaryplus.ca/calgary/venues/pumphouse-park
   name: Pumphouse Park
+  paused: true
 - name: Reader Rock Garden
   low_limit: 10
   url: http://www.calgary.ca/CSPS/Parks/Pages/Locations/SE-parks/Reader-Rock-Garden.aspx
