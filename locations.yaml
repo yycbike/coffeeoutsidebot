@@ -69,10 +69,10 @@
   low_limit: 10
   url: https://goo.gl/maps/2x2rRGgpdCdBG7am8
 - name: Central Memorial Park
-  low_limit: -8
+  low_limit: -5
   url: https://www.calgary.ca/parks/central-memorial-park.html
 - name: Connaught Park
-  low_limit: -8
+  low_limit: -5
   url: https://www.calgary.ca/parks/connaught-park.html
 - name: Gladstone Pocket Park
   address: TODO
@@ -87,7 +87,7 @@
   rainy_day: true
 - name: Containr Park
   address: 1020 2 Ave NW
-  low_limit: -8
+  low_limit: -5
   url: https://springboardperformance.com/containr
 - name: East Village Music Pavilion
   url: https://www.evexperience.com/music-pavilion
