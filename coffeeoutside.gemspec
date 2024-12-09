@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.description   = "The CoffeeOutside bot helps choose a coffee location based on weather and other inputs"
   spec.homepage      = "https://coffeeoutside.bike"
   spec.license       = "MIT"
-  spec.required_ruby_version = ">= 2.5.0"
+  spec.required_ruby_version = ">= 3.0.0"
 
   spec.metadata["allowed_push_host"] = "https://rubygems.org"
 
