@@ -96,8 +96,10 @@
 - name: Delta Park
   url: https://www.google.com/maps/place/Delta+Garden/@51.0521029,-114.0786464,17z/
   low_limit: -5
-- name: DeVille Luxury Coffee
-  paused: true
+- name: DeVille Coffee (The District)
+  address: 227 12th Ave SW
+  high_limit: -10
+  url: https://www.devillecoffee.ca/calgary-cafes
 - name: Enmax Stage on Prince's Island
   url: https://www.calgary.ca/parks/princes-island-park.html
   low_limit: -5
