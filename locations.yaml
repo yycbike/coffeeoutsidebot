@@ -214,7 +214,8 @@
   high_limit: -3
   address: 1223 11 Ave SW
   rainy_day: true
-  paused: true
+  url: https://qlabcoffee.ca
+  paused: true # Get hours and location of new place
 - name: Fringe Coffee
   url: https://fringecoffee.ca/
   low_limit: 8
