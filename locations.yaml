@@ -71,6 +71,11 @@
 - name: Central Memorial Park
   low_limit: -5
   url: https://www.calgary.ca/parks/central-memorial-park.html
+- name: Congress Coffee Shop
+  low_limit: 18
+  url: https://www.congresscoffeeshop.com/
+  address: 215 1a 36 Ave NE
+  paused: true # need to confirm bike parking
 - name: Connaught Park
   low_limit: -5
   url: https://www.calgary.ca/parks/connaught-park.html
