@@ -168,6 +168,9 @@
 - name: Peace Park
   low_limit: 0
   url: https://www.calgary.ca/parks/peace-park.html
+- name: Pixel Park
+  url: https://www.cedistrict.com/pixel-park
+  low_limit: 10
 - name: Poetic Park Plaza
   url: https://www.calgary.ca/parks/poetic-park.html
   low_limit: 0
