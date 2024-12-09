@@ -20,6 +20,11 @@
   high_limit: 5
   rainy_day: true
   paused: true  # Opens 8AM as of 2022-11-17
+- url: https://www.instagram.com/iloveyoucoffeeshopjr/
+  name: I Love You Coffee Shop Jr.
+  address: 520b 12 Ave SW
+  high_limit: 5
+  rainy_day: true
 - url: https://www.bayaricacafe.ca/
   name: Baya Rica Cafe
   address: 204 7A Street NE
