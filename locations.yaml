@@ -20,7 +20,7 @@
   high_limit: 5
   rainy_day: true
   paused: true  # Opens 8AM as of 2022-11-17
-- url: http://www.bayaricacafe.ca/
+- url: https://www.bayaricacafe.ca/
   name: Baya Rica Cafe
   address: 204 7A Street NE
   high_limit: 5
@@ -65,10 +65,10 @@
   url: https://goo.gl/maps/2x2rRGgpdCdBG7am8
 - name: Central Memorial Park
   low_limit: -8
-  url: http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Central-Memorial-Park.aspx
+  url: https://www.calgary.ca/parks/central-memorial-park.html
 - name: Connaught Park
   low_limit: -8
-  url: http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Connaught-Park.aspx
+  url: https://www.calgary.ca/parks/connaught-park.html
 - name: Gladstone Pocket Park
   address: TODO
   low_limit: -1
@@ -94,7 +94,7 @@
 - name: DeVille Luxury Coffee
   paused: true
 - name: Enmax Stage on Prince's Island
-  url: http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Princes-Island-Park.aspx
+  url: https://www.calgary.ca/parks/princes-island-park.html
   low_limit: -5
   rainy_day: true
 - name: Gerry Shaw Gardens
@@ -109,7 +109,7 @@
   url: https://goo.gl/maps/jZG2saNkY1AnhbY29
 - name: Haultain Park
   low_limit: -8
-  url: http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Haultain-Park.aspx
+  url: https://www.calgary.ca/parks/haultain-park.html
 - name: High Park
   location_hint: walk your bike up
   low_limit: 0
@@ -123,7 +123,7 @@
   low_limit: 10
 - name: Ice Rink at Olympic Plaza
   high_limit: -5
-  url: http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Olympic-Plaza.aspx
+  url: https://www.calgary.ca/parks/olympic-plaza.html
   low_limit: -15
   nearby_coffee: Ca'Puccini
   paused: true
@@ -133,7 +133,7 @@
   url: https://www.calgary.ca/parks/harmony-park.html
 - name: Lougheed House Beaulieu Gardens
   low_limit: -2
-  url: http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Beaulieu-Gardens.aspx
+  url: https://www.calgary.ca/parks/beaulieu-gardens.html
 - name: Rosedale Dog Park
   location_hint: benches at top of bluff
   address: 1103 10 St NW
@@ -147,7 +147,7 @@
   url: TODO
   paused: true
 - low_limit: 10
-  url: http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Olympic-Plaza.aspx
+  url: https://www.calgary.ca/parks/olympic-plaza.html
   paused: true
   name: Olympic Plaza
 - name: Nellie Breen Park
@@ -155,21 +155,21 @@
   rainy_day: true
   url: https://goo.gl/maps/Zgz1QVSQ2jUyQF3H7
   address: 703 14 St SE, Calgary, AB T2G 3J9
-- url: http://calgary.ca/CSPS/Parks/Pages/Locations/NW-parks/Riley-Park.aspx
+- url: https://www.calgary.ca/parks/riley-park.html
   low_limit: 0
   name: Patrick Burns Rock Garden at Riley Park
 - name: Peace Park
   low_limit: 0
-  url: http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Peace-Park.aspx
+  url: https://www.calgary.ca/parks/peace-park.html
 - name: Poetic Park Plaza
-  url: http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Poetic-Park.aspx
+  url: https://www.calgary.ca/parks/poetic-park.html
   low_limit: 0
 - low_limit: 3
   name: Pumphouse Park
   paused: true
 - name: Reader Rock Garden
   low_limit: 10
-  url: http://www.calgary.ca/CSPS/Parks/Pages/Locations/SE-parks/Reader-Rock-Garden.aspx
+  url: https://www.calgary.ca/parks/reader-rock-garden.html
 - name: Riley Park
   location_hint: Stage
   url: https://www.calgary.ca/csps/parks/locations/nw-parks/riley-park.html
@@ -178,13 +178,13 @@
 - name: Rosso Coffee Roasters
   paused: true
 - low_limit: 5
-  url: http://www.calgary.ca/CSPS/Parks/Pages/Locations/NE-parks/Rotary-Park.aspx
+  url: https://www.calgary.ca/parks/rotary-park.html
   name: Rotary Park
 - name: Rundle Ruins
   address: 632 13 Avenue SE
   low_limit: 0
 - low_limit: 0
-  url: http://www.calgary.ca/CSPS/Parks/Pages/Locations/SW-parks/Sandy-Beach.aspx
+  url: https://www.calgary.ca/parks/sandy-beach.html
   name: Sandy Beach
 - url: https://goo.gl/maps/yzMjfBj4JrKQxkvu6
   low_limit: 10
@@ -192,7 +192,7 @@
 - name: Millenium Park
   url: https://www.calgary.ca/parks/millennium-park.html
   low_limit: 0
-- url: http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Sien-Lok-Park.aspx
+- url: https://www.calgary.ca/parks/sien-lok-park.html
   low_limit: 0
   name: Sien Lok Park
 - name: The Roasterie
@@ -211,7 +211,7 @@
   rainy_day: true
   paused: true
 - name: Fringe Coffee
-  url: http://www.fringecoffee.ca/
+  url: https://fringecoffee.ca/
   low_limit: 8
   address: 4628 Bowness Rd NW
   rainy_day: true
@@ -232,24 +232,24 @@
   rainy_day: true
   paused: true  # "temporarily closed" in Google as of 2022-11-17
 - low_limit: 10
-  url: http://www.calgary.ca/CSPS/Parks/Pages/Locations/SW-parks/Stanley-Park.aspx
+  url: https://www.calgary.ca/parks/stanley-park.html
   name: Stanley Park Flower Garden
 - name: Sunalta Community Wildflower Garden
   low_limit: 7
   address: 1310 16 St SW
 - name: The Rise on St. Patrick's Island
-  url: http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/St.-Patrick's-Island-Park.aspx
+  url: https://www.calgary.ca/parks/st-patricks-island.html
   low_limit: 0
 - name: Confluence Plaza on St. Patrick's Island
-  url: http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/St.-Patrick's-Island-Park.aspx
+  url: https://www.calgary.ca/parks/st-patricks-island.html
   low_limit: -5
   rainy_day: true
 - name: Thomson Family Park
-  url: http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Thomson-Family-Park.aspx
+  url: https://www.calgary.ca/parks/thomson-family-park.html
   low_limit: 0
   rainy_day: true
 - name: Tom Campbell's Hill
-  url: http://www.calgary.ca/CSPS/Parks/Pages/Locations/NE-parks/Tom-Campbells-Hill.aspx
+  url: https://www.calgary.ca/parks/tom-campbells-hill.html
   low_limit: 0
 - name: Tomkins Park
   url: https://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Tomkins-Park.aspx
