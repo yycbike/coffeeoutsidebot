@@ -240,6 +240,7 @@
   high_limit: -5
   rainy_day: true
   url: https://www.instagram.com/ukrainian_coffee_house_calgary/
+  paused: true # Opens at 9AM, 2024-12-12
 - name: Muze Coffeehouse
   url: TODO
   high_limit: -3
