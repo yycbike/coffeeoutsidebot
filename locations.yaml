@@ -206,6 +206,7 @@
 - name: Millenium Park
   url: https://www.calgary.ca/parks/millennium-park.html
   low_limit: 0
+  paused: true # Construction (also now called Cowboys park)
 - url: https://www.calgary.ca/parks/sien-lok-park.html
   low_limit: 0
   name: Sien Lok Park
