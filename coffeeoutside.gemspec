@@ -24,7 +24,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_dependency "http", "= 4.0.0"
-  spec.add_dependency "icalendar", "= 2.7.1"
+  spec.add_dependency "icalendar", "= 2.11.0"
   spec.add_dependency "openweathermap", "= 0.2.3"
   spec.add_dependency "rss", "= 0.2.9"
   spec.metadata["rubygems_mfa_required"] = "true"
