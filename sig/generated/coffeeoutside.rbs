@@ -1,0 +1,18 @@
+# Generated from lib/coffeeoutside.rb with RBS::Inline
+
+module CoffeeOutside
+  class Error < StandardError
+  end
+
+  class Config
+    attr_reader dispatchers: untyped
+
+    attr_reader openweathermap: untyped
+
+    def initialize: (?untyped config_file) -> untyped
+
+    def production?: () -> untyped
+  end
+
+  def main: () -> untyped
+end

@@ -1,0 +1,60 @@
+# Generated from lib/coffeeoutside/locations.rb with RBS::Inline
+
+module CoffeeOutside
+  class Location
+    attr_reader name: untyped
+
+    attr_reader location_hint: untyped
+
+    attr_reader address: untyped
+
+    attr_reader url: untyped
+
+    attr_reader nearby_coffee: untyped
+
+    # : (Hash[String, untyped] params) -> untyped
+    def initialize: (Hash[String, untyped] params) -> untyped
+
+    def paused?: () -> bool
+
+    # : (Forecast forecast) -> bool
+    def weather_appropriate?: (Forecast forecast) -> bool
+
+    def to_s: () -> String
+  end
+
+  class LocationFile
+    attr_reader locations: Array[Location]
+
+    # : (String filename) -> Array[Location]
+    def initialize: (String filename) -> Array[Location]
+  end
+
+  class OverrideFile
+    attr_reader location: Location
+
+    # : (String filename) -> untyped
+    def initialize: (String filename) -> untyped
+
+    def override?: () -> bool
+
+    def delete_file: () -> untyped
+  end
+
+  class LocationChooser
+    attr_reader location: Location
+
+    # : (Forecast forecast, ?destructive: bool) -> untyped
+    def initialize: (Forecast forecast, ?destructive: bool) -> untyped
+  end
+
+  class PriorLocationsFile
+    # : (String filename) -> untyped
+    def initialize: (String filename) -> untyped
+
+    def previous_locations: () -> Array[Location]
+
+    # : (Location location) -> untyped
+    def append_location: (Location location) -> untyped
+  end
+end

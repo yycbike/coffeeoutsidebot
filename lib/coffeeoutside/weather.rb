@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+# rbs_inline: enabled
 
 require "openweathermap"
 
@@ -24,32 +25,34 @@ module CoffeeOutside
       @result.forecast.last
     end
 
+    # TODO remove this
     def parse_owm_datestring(str)
       DateTime.strptime(str, "%Y-%m-%d %H-%M-%S")
     end
 
-    def forecast
+    def forecast #: Forecast
       api_call
       fc = closest_forecast
       Forecast.new(humidity: fc.humidity, temperature: fc.temperature)
     end
   end
 
-  HUMIDITY_LIMIT = 90
+  HUMIDITY_LIMIT = 90 #: Integer
   class Forecast
+    #: (Hash[Symbol, Integer] hash) -> untyped
     def initialize(hash)
       @humidity = hash[:humidity] || 0
       @temperature = hash[:temperature] || 0
     end
 
-    def rainy?
+    def rainy? #: bool
       # TODO: could also regex for "rain" or "snow" from OWM...
       @humidity >= HUMIDITY_LIMIT
     end
 
-    attr_reader :temperature
+    attr_reader :temperature #: Integer
 
-    def to_s
+    def to_s #: String
       "Forecast is temp of #{@temperature} humidity #{@humidity}"
     end
   end

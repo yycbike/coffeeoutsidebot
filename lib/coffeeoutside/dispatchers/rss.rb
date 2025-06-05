@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+# rbs_inline: enabled
 
 require_relative "dispatcher"
 require "rss"
@@ -6,14 +7,14 @@ require "rss"
 module CoffeeOutside
   module Dispatchers
     class Rss < DispatcherBase
-      def generate_description
+      def generate_description #: String
         items = []
         items.append(["Address: #{@location.address}"]) if @location.address
         items.append(@forecast)
         items.join("\n")
       end
 
-      def generate_rss_string
+      def generate_rss_string #: String
         RSS::Maker.make("2.0") do |maker|
           maker.channel.language = "en"
           maker.channel.author = "CoffeeOutsideBot"
@@ -37,7 +38,7 @@ module CoffeeOutside
         i.write(generate_rss_string)
       end
 
-      def notify_debug
+      def notify_debug #: String
         puts generate_rss_string
       end
     end

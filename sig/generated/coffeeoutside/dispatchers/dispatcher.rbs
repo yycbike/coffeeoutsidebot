@@ -1,0 +1,26 @@
+# Generated from lib/coffeeoutside/dispatchers/dispatcher.rb with RBS::Inline
+
+module CoffeeOutside
+  class DispatcherBase
+    attr_reader start_time: untyped
+
+    attr_reader end_time: untyped
+
+    attr_reader location: untyped
+
+    attr_reader forecast: untyped
+
+    # : (Hash[Symbol, untyped] config) -> untyped
+    def initialize: (Hash[Symbol, untyped] config) -> untyped
+
+    def production?: () -> bool
+
+    def notify: () -> untyped
+
+    def notify_production: () -> untyped
+
+    def debug_method: () -> untyped
+
+    def notify_debug: () -> untyped
+  end
+end

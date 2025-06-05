@@ -1,4 +1,5 @@
 # frozen_string_literal: false
+# rbs_inline: enabled
 
 require_relative "dispatcher"
 require "json"
@@ -15,13 +16,13 @@ module CoffeeOutside
             .post("https://yyc.bike/api/v1/statuses/", params: { status: location_toot_msg })
       end
 
-      def notify_debug
+      def notify_debug #: String
         puts "access_token = #{@params["token"]}"
         puts location_toot_msg
         puts "\n"
       end
 
-      def location_toot_msg
+      def location_toot_msg #: String
         str = "This week's #CoffeeOutside: #{@location.name}"
         str << " (#{@location.location_hint})" if @location.location_hint
         str << " #{@location.url}" if @location.url

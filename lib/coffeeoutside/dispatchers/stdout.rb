@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+# rbs_inline: enabled
 
 require_relative "dispatcher"
 
@@ -11,7 +12,7 @@ module CoffeeOutside
         # puts "Chosen location is #{@location.name}"
       end
 
-      def notify_debug
+      def notify_debug #: String
         puts "Chosen location is #{@location.name}"
       end
     end

@@ -1,9 +1,11 @@
 # frozen_string_literal: true
+# rbs_inline: enabled
 
 module CoffeeOutside
   class DispatcherBase
     attr_reader :start_time, :end_time, :location, :forecast
 
+    #: (Hash[Symbol, untyped] config) -> untyped
     def initialize(config)
       @start_time = config[:start_time]
       @end_time = config[:end_time]
@@ -14,7 +16,7 @@ module CoffeeOutside
       @params = config
     end
 
-    def production?
+    def production? #: bool
       @production
     end
 

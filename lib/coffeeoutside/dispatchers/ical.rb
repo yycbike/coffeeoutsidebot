@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+# rbs_inline: enabled
 
 require_relative "dispatcher"
 require "icalendar"
@@ -6,7 +7,7 @@ require "icalendar"
 module CoffeeOutside
   module Dispatchers
     class Ical < DispatcherBase
-      def generate_ical_string
+      def generate_ical_string #: String
         format = "%Y%m%dT%H%M%S"
         tzid = "America/Edmonton"
 
@@ -26,7 +27,7 @@ module CoffeeOutside
         i.write(generate_ical_string)
       end
 
-      def notify_debug
+      def notify_debug #: String
         puts generate_ical_string
       end
     end

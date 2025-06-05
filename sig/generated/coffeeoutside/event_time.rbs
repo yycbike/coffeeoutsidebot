@@ -1,0 +1,11 @@
+# Generated from lib/coffeeoutside/event_time.rb with RBS::Inline
+
+module CoffeeOutside
+  module EventTime
+    def self.next_friday: () -> untyped
+
+    def self.start_time: () -> untyped
+
+    def self.end_time: () -> untyped
+  end
+end

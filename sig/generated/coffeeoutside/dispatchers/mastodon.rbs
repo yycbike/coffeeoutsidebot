@@ -1,0 +1,13 @@
+# Generated from lib/coffeeoutside/dispatchers/mastodon.rb with RBS::Inline
+
+module CoffeeOutside
+  module Dispatchers
+    class Mastodon < DispatcherBase
+      def notify_production: () -> untyped
+
+      def notify_debug: () -> String
+
+      def location_toot_msg: () -> String
+    end
+  end
+end

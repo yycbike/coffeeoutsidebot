@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+# rbs_inline: enabled
 
 require "yaml"
 
@@ -6,6 +7,7 @@ module CoffeeOutside
   class Location
     attr_reader :name, :location_hint, :address, :url, :nearby_coffee
 
+    #: (Hash[String, untyped] params) -> untyped
     def initialize(params)
       if params["name"]
         @name = params["name"]
@@ -27,10 +29,11 @@ module CoffeeOutside
       @params = params
     end
 
-    def paused?
+    def paused? #: bool
       @paused
     end
 
+    #: (Forecast forecast) -> bool
     def weather_appropriate?(forecast)
       # TODO: stderr reasons?
 
@@ -41,14 +44,15 @@ module CoffeeOutside
       true
     end
 
-    def to_s
+    def to_s #: String
       @name
     end
   end
 
   class LocationFile
-    attr_reader :locations
+    attr_reader :locations #: Array[Location]
 
+    #: (String filename) -> Array[Location]
     def initialize(filename = "./locations.yaml")
       y = YAML.load_file(filename)
       @locations = []
@@ -60,8 +64,9 @@ module CoffeeOutside
   end
 
   class OverrideFile
-    attr_reader :location
+    attr_reader :location #: Location
 
+    #: (String filename) -> untyped
     def initialize(filename = "./override.yaml")
       @filename = filename
       if ::File.exist? @filename
@@ -73,7 +78,7 @@ module CoffeeOutside
       end
     end
 
-    def override?
+    def override? #: bool
       @override
     end
 
@@ -83,8 +88,9 @@ module CoffeeOutside
   end
 
   class LocationChooser
-    attr_reader :location
+    attr_reader :location #: Location
 
+    #: (Forecast forecast, ?destructive: bool) -> untyped
     def initialize(forecast, destructive: false)
       @location = nil
       of = OverrideFile.new
@@ -126,6 +132,7 @@ module CoffeeOutside
   end
 
   class PriorLocationsFile
+    #: (String filename) -> untyped
     def initialize(filename = "./prior_locations.yaml")
       @filename = filename
       @locations = if File.exist? filename
@@ -135,10 +142,11 @@ module CoffeeOutside
                    end
     end
 
-    def previous_locations
+    def previous_locations #: Array[Location]
       @locations
     end
 
+    #: (Location location) -> untyped
     def append_location(location)
       @locations.append location.name
       f = File.open(@filename, "w")

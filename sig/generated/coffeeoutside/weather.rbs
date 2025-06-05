@@ -1,0 +1,31 @@
+# Generated from lib/coffeeoutside/weather.rb with RBS::Inline
+
+module CoffeeOutside
+  class OWM
+    attr_accessor result: untyped
+
+    def initialize: (untyped config, ?untyped time) -> untyped
+
+    def api_call: () -> untyped
+
+    def closest_forecast: () -> untyped
+
+    # TODO remove this
+    def parse_owm_datestring: (untyped str) -> untyped
+
+    def forecast: () -> Forecast
+  end
+
+  HUMIDITY_LIMIT: Integer
+
+  class Forecast
+    # : (Hash[Symbol, Integer] hash) -> untyped
+    def initialize: (Hash[Symbol, Integer] hash) -> untyped
+
+    def rainy?: () -> bool
+
+    attr_reader temperature: Integer
+
+    def to_s: () -> String
+  end
+end

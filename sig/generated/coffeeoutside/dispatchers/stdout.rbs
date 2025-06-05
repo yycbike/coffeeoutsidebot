@@ -1,0 +1,11 @@
+# Generated from lib/coffeeoutside/dispatchers/stdout.rb with RBS::Inline
+
+module CoffeeOutside
+  module Dispatchers
+    class Stdout < DispatcherBase
+      def notify_production: () -> untyped
+
+      def notify_debug: () -> String
+    end
+  end
+end
