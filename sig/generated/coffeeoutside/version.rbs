@@ -1,0 +1,5 @@
+# Generated from lib/coffeeoutside/version.rb with RBS::Inline
+
+module CoffeeOutside
+  VERSION: String
+end
