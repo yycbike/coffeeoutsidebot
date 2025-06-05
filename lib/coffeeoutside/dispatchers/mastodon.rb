@@ -1,4 +1,5 @@
 # frozen_string_literal: false
+
 # rbs_inline: enabled
 
 require_relative "dispatcher"
