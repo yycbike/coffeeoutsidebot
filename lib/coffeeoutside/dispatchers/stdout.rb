@@ -13,7 +13,7 @@ module CoffeeOutside
         # puts "Chosen location is #{@location.name}"
       end
 
-      def notify_debug #: String
+      def notify_debug
         puts "Chosen location is #{@location.name}"
       end
     end

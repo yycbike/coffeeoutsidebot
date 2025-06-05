@@ -39,7 +39,7 @@ module CoffeeOutside
         i.write(generate_rss_string)
       end
 
-      def notify_debug #: String
+      def notify_debug
         puts generate_rss_string
       end
     end

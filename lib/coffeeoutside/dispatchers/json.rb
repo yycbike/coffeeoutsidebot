@@ -22,7 +22,7 @@ module CoffeeOutside
         i.write(generate_json_blob)
       end
 
-      def notify_debug #: String
+      def notify_debug
         puts generate_json_blob
       end
     end

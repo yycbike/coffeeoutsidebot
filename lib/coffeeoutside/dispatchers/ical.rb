@@ -28,7 +28,7 @@ module CoffeeOutside
         i.write(generate_ical_string)
       end
 
-      def notify_debug #: String
+      def notify_debug
         puts generate_ical_string
       end
     end

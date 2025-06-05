@@ -53,7 +53,7 @@ module CoffeeOutside
   class LocationFile
     attr_reader :locations #: Array[Location]
 
-    #: (String filename) -> Array[Location]
+    #: (?String filename) -> Array[Location]
     def initialize(filename = "./locations.yaml")
       y = YAML.load_file(filename)
       @locations = []
@@ -67,7 +67,7 @@ module CoffeeOutside
   class OverrideFile
     attr_reader :location #: Location
 
-    #: (String filename) -> untyped
+    #: (?String filename) -> untyped
     def initialize(filename = "./override.yaml")
       @filename = filename
       if ::File.exist? @filename
@@ -133,7 +133,7 @@ module CoffeeOutside
   end
 
   class PriorLocationsFile
-    #: (String filename) -> untyped
+    #: (?String filename) -> untyped
     def initialize(filename = "./prior_locations.yaml")
       @filename = filename
       @locations = if File.exist? filename

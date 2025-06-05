@@ -17,7 +17,7 @@ module CoffeeOutside
             .post("https://yyc.bike/api/v1/statuses/", params: { status: location_toot_msg })
       end
 
-      def notify_debug #: String
+      def notify_debug
         puts "access_token = #{@params["token"]}"
         puts location_toot_msg
         puts "\n"

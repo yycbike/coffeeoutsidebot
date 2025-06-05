@@ -2,5 +2,5 @@
 
 target :lib do
   signature "sig"
-  check "lib/coffeeoutside/version.rb" # Directory name
+  check "lib" # Directory name
 end

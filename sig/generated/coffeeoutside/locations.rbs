@@ -26,15 +26,15 @@ module CoffeeOutside
   class LocationFile
     attr_reader locations: Array[Location]
 
-    # : (String filename) -> Array[Location]
-    def initialize: (String filename) -> Array[Location]
+    # : (?String filename) -> Array[Location]
+    def initialize: (?String filename) -> Array[Location]
   end
 
   class OverrideFile
     attr_reader location: Location
 
-    # : (String filename) -> untyped
-    def initialize: (String filename) -> untyped
+    # : (?String filename) -> untyped
+    def initialize: (?String filename) -> untyped
 
     def override?: () -> bool
 
@@ -49,8 +49,8 @@ module CoffeeOutside
   end
 
   class PriorLocationsFile
-    # : (String filename) -> untyped
-    def initialize: (String filename) -> untyped
+    # : (?String filename) -> untyped
+    def initialize: (?String filename) -> untyped
 
     def previous_locations: () -> Array[Location]
 
