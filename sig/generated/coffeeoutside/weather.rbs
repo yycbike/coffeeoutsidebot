@@ -10,9 +10,6 @@ module CoffeeOutside
 
     def closest_forecast: () -> untyped
 
-    # TODO remove this
-    def parse_owm_datestring: (untyped str) -> untyped
-
     def forecast: () -> Forecast
   end
 

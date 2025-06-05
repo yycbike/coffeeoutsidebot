@@ -25,11 +25,6 @@ module CoffeeOutside
       @result.forecast.last
     end
 
-    # TODO remove this
-    def parse_owm_datestring(str)
-      DateTime.strptime(str, "%Y-%m-%d %H-%M-%S")
-    end
-
     def forecast #: Forecast
       api_call
       fc = closest_forecast
