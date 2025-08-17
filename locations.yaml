@@ -51,6 +51,7 @@
   address: 609 8 Ave SW
   name: Cafe Eight
   url: https://maps.app.goo.gl/MipmL9cHmTUTF2RSA
+  map_id: MipmL9cHmTUTF2RSA
   rainy_day: true
 - high_limit: 0
   address: 909 10 St SE
@@ -66,7 +67,8 @@
 - name: CNIB Fragrant Garden
   address: 10 11A St NE
   low_limit: 10
-  url: https://goo.gl/maps/2x2rRGgpdCdBG7am8
+  url: https://maps.app.goo.gl/2mfBJiU5tmwFA7m77
+  map_id: 2mfBJiU5tmwFA7m77
 - name: Central Memorial Park
   low_limit: -5
   url: https://www.calgary.ca/parks/central-memorial-park.html
@@ -117,7 +119,8 @@
 - name: Harvie Passage Lookout
   location_hint: by the weir entrance
   low_limit: 0
-  url: https://goo.gl/maps/jZG2saNkY1AnhbY29
+  url: https://maps.app.goo.gl/CiQ5tb6sQ8VdtXUFA
+  map_id: CiQ5tb6sQ8VdtXUFA
 - name: Haultain Park
   low_limit: -8
   url: https://www.calgary.ca/parks/haultain-park.html
@@ -128,7 +131,8 @@
   paused: true
 - name: Horsy Park
   low_limit: 15
-  url: https://goo.gl/maps/ido1KAcqdJGtkeVN8
+  url: https://maps.app.goo.gl/hayER4NPkYTcdiXC8
+  map_id: hayER4NPkYTcdiXC8
 - name: Humpy Hollow Park
   url: https://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Humpy-Hollow-Park.aspx
   low_limit: 10
@@ -149,7 +153,8 @@
   location_hint: benches at top of bluff
   address: 1103 10 St NW
   low_limit: 5
-  url: https://goo.gl/maps/Rpf5WTGQzyMkWSYY9
+  url: https://maps.app.goo.gl/NBm36W3fEFxmaiF49
+  map_id: NBm36W3fEFxmaiF49
 - name: Munro Park
   address: 425 18 Ave NE
   url: https://www.calgary.ca/csps/parks/locations/ne-parks/munro-park.html
@@ -164,7 +169,8 @@
 - name: Nellie Breen Park
   low_limit: -2
   rainy_day: true
-  url: https://goo.gl/maps/Zgz1QVSQ2jUyQF3H7
+  url: https://maps.app.goo.gl/f1WLB7h44cp9n47i6
+  map_id: f1WLB7h44cp9n47i6
   address: 703 14 St SE, Calgary, AB T2G 3J9
 - url: https://www.calgary.ca/parks/riley-park.html
   low_limit: 0
@@ -200,7 +206,8 @@
 - low_limit: 0
   url: https://www.calgary.ca/parks/sandy-beach.html
   name: Sandy Beach
-- url: https://goo.gl/maps/yzMjfBj4JrKQxkvu6
+- url: https://maps.app.goo.gl/vmujWbqYDPQcUnxJ8
+  map_id: vmujWbqYDPQcUnxJ8
   low_limit: 10
   name: South Mount Royal Park
 - name: Millenium Park
@@ -219,7 +226,8 @@
   location_hint: by lower swings
   low_limit: 5
   address: 302 Sharon Ave SW
-  url: https://goo.gl/maps/JENurv2NNhDrk6Mu6
+  url: https://maps.app.goo.gl/h5nVaFzkV5VfBpXH7
+  map_id: h5nVaFzkV5VfBpXH7
 - name: Q.Lab Coffee Roasters & Tasting Experience
   high_limit: -3
   address: 1223 11 Ave SW
@@ -277,10 +285,12 @@
   name: West Side of McDougall Centre
 - low_limit: 0
   address: 215 24 Ave SW
-  url: https://goo.gl/maps/mNg4SaM1DeBX9V3L6
+  url: https://maps.app.goo.gl/L9uR69mnTTkR64yt7
+  map_id: L9uR69mnTTkR64yt7
   name: William Aberhart Park
 - name: 5th Street Square
-  url: https://goo.gl/maps/RqUC8EDDZrssGrCN9
+  url: https://maps.app.goo.gl/GCCRSauWxSXBmMUx9
+  map_id: GCCRSauWxSXBmMUx9
   low_limit: 8
   address: 712 5 St SE
 - name: Lois Szabo Commons
