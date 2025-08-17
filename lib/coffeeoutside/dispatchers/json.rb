@@ -15,7 +15,7 @@ module CoffeeOutside
         }
         location[:address] = @location.address if @location.address
         location[:map_url] = @location.map_url if @location.map_url
-        ::JSON.dump({ location: location })
+        ::JSON.dump({ location: location, start_date: @start_time.strftime("%B %e, %Y") })
       end
 
       def notify_production
