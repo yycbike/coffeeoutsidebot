@@ -19,6 +19,7 @@ module CoffeeOutside
           e.dtend = Icalendar::Values::DateTime.new @end_time.strftime(format), "tzid" => tzid
           e.summary = "CoffeeOutside - #{@location.name}"
           e.location = "#{@location.address || @location.name} #{@location.location_hint}"
+          e.description = "Map URL: #{@location.map_url}" if @location.map_url
         end
         cal.to_ical
       end

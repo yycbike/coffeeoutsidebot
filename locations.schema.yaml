@@ -20,6 +20,9 @@ sequence:
       "nearby_coffee":
         desc: "Nearby places to purchase coffee"
         type: str
+      "map_id":
+        desc: "ID for map site (currently Google Maps)"
+        type: str
       "paused":
         desc: "True if site is paused from being used"
         type: bool

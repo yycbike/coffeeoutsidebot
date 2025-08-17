@@ -6,7 +6,7 @@ require "yaml"
 
 module CoffeeOutside
   class Location
-    attr_reader :name, :location_hint, :address, :url, :nearby_coffee
+    attr_reader :name, :location_hint, :address, :url, :map_url, :nearby_coffee
 
     #: (Hash[String, untyped] params) -> untyped
     def initialize(params)
@@ -18,6 +18,7 @@ module CoffeeOutside
       @paused = params["paused"] || false
       @nearby_coffee = params["nearby_coffee"] || []
       @url = params["url"] if params["url"]
+      @map_url = generate_map_url(params["map_id"]) if params["map_id"]
       @address = params["address"] if params["address"]
       @location_hint = params["location_hint"] if params["location_hint"]
 
@@ -32,6 +33,11 @@ module CoffeeOutside
 
     def paused? #: bool
       @paused
+    end
+
+    #: (String id) -> String
+    def generate_map_url(id)
+      "https://maps.app.goo.gl/#{id}"
     end
 
     #: (Forecast forecast) -> bool

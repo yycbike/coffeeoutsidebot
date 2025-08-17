@@ -11,6 +11,7 @@ module CoffeeOutside
       def generate_description #: String
         items = []
         items.append(["Address: #{@location.address}"]) if @location.address
+        items.append(["Map URL: #{@location.map_url}"]) if @location.map_url
         items.append(@forecast)
         items.join("\n")
       end

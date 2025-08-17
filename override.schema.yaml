@@ -14,3 +14,6 @@ mapping:
   "nearby_coffee":
     desc: "Nearby places to purchase coffee"
     type: str
+  "map_id":
+    desc: "ID for map site (currently Google Maps)"
+    type: str

@@ -10,12 +10,16 @@ module CoffeeOutside
 
     attr_reader url: untyped
 
+    attr_reader map_id: untyped
+
     attr_reader nearby_coffee: untyped
 
     # : (Hash[String, untyped] params) -> untyped
     def initialize: (Hash[String, untyped] params) -> untyped
 
     def paused?: () -> bool
+
+    def generate_map_url: (untyped id) -> untyped
 
     # : (Forecast forecast) -> bool
     def weather_appropriate?: (Forecast forecast) -> bool

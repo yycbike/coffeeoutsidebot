@@ -14,6 +14,7 @@ module CoffeeOutside
           url: @location.url
         }
         location[:address] = @location.address if @location.address
+        location[:map_url] = @location.map_url if @location.map_url
         ::JSON.dump({ location: location })
       end
 
