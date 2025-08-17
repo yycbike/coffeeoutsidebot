@@ -206,6 +206,7 @@
 - low_limit: 0
   url: https://www.calgary.ca/parks/sandy-beach.html
   name: Sandy Beach
+  location_hint: beach by bridge
 - url: https://maps.app.goo.gl/vmujWbqYDPQcUnxJ8
   map_id: vmujWbqYDPQcUnxJ8
   low_limit: 10
