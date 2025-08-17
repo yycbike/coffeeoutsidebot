@@ -134,7 +134,7 @@
   url: https://maps.app.goo.gl/hayER4NPkYTcdiXC8
   map_id: hayER4NPkYTcdiXC8
 - name: Humpy Hollow Park
-  url: https://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Humpy-Hollow-Park.aspx
+  url: https://www.calgary.ca/parks/humpy-hollow-park.html
   low_limit: 10
 - name: Ice Rink at Olympic Plaza
   high_limit: -5
@@ -157,7 +157,7 @@
   map_id: NBm36W3fEFxmaiF49
 - name: Munro Park
   address: 425 18 Ave NE
-  url: https://www.calgary.ca/csps/parks/locations/ne-parks/munro-park.html
+  url: https://www.calgary.ca/parks/munro-park.html
   low_limit: 20
 - name: City Hall municipal building
   url: TODO
@@ -192,7 +192,7 @@
   url: https://www.calgary.ca/parks/reader-rock-garden.html
 - name: Riley Park
   location_hint: Stage
-  url: https://www.calgary.ca/csps/parks/locations/nw-parks/riley-park.html
+  url: https://www.calgary.ca/parks/riley-park.html
   low_limit: -8
   rainy_day: true
 - name: Rosso Coffee Roasters
@@ -277,7 +277,7 @@
   url: https://www.calgary.ca/parks/tom-campbells-hill.html
   low_limit: 0
 - name: Tomkins Park
-  url: https://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Tomkins-Park.aspx
+  url: https://www.calgary.ca/parks/tomkins-park.html
   low_limit: -5
   rainy_day: true
 - low_limit: -10
