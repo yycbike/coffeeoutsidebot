@@ -281,7 +281,8 @@
   low_limit: -5
   rainy_day: true
 - low_limit: -10
-  url: https://www.google.ca/maps/place/McDougall+Centre,+Calgary,+AB+T2P/@51.049273,-114.0773586,17z/data=!4m2!3m1!1s0x53716fe4fd339a6f:0x6a0dd3ff806e1e98
+  url: https://maps.app.goo.gl/EiMCsjDMKJqQ3deo8
+  map_id: EiMCsjDMKJqQ3deo8
   name: West Side of McDougall Centre
 - low_limit: 0
   address: 215 24 Ave SW
