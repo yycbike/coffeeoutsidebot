@@ -62,8 +62,6 @@
   address: 1613 9th Street SW
   name: Caffe Beano
   rainy_day: true
-- name: Ca'puccini
-  paused: true
 - name: CNIB Fragrant Garden
   address: 10 11A St NE
   low_limit: 10
@@ -72,6 +70,7 @@
 - name: Central Memorial Park
   low_limit: -5
   url: https://www.calgary.ca/parks/central-memorial-park.html
+  paused: true
 - name: Congress Coffee Shop
   low_limit: 18
   url: https://www.congresscoffeeshop.com/
@@ -91,10 +90,12 @@
   low_limit: -1
   url: https://calgarylibrary.ca/your-library/locations/cent/
   rainy_day: true
+  paused: true
 - name: Containr Park
   address: 1020 2 Ave NW
   low_limit: -5
   url: https://springboardperformance.com/containr
+  paused: true
 - name: East Village Music Pavilion
   url: https://www.evexperience.com/music-pavilion
   low_limit: -5
@@ -191,7 +192,7 @@
 - name: Reader Rock Garden
   low_limit: 10
   url: https://www.calgary.ca/parks/reader-rock-garden.html
-- name: Riley Park
+- name: Riley Park Stage
   location_hint: Stage
   url: https://www.calgary.ca/parks/riley-park.html
   low_limit: -8
@@ -201,13 +202,14 @@
 - low_limit: 5
   url: https://www.calgary.ca/parks/rotary-park.html
   name: Rotary Park
+  location_hint: Mt Pleasant View Point
 - name: Rundle Ruins
   address: 632 13 Avenue SE
   low_limit: 0
 - low_limit: 0
   url: https://www.calgary.ca/parks/sandy-beach.html
   name: Sandy Beach
-  location_hint: beach by bridge
+  location_hint: beach by footbridge
 - url: https://maps.app.goo.gl/vmujWbqYDPQcUnxJ8
   map_id: vmujWbqYDPQcUnxJ8
   low_limit: 10
@@ -232,10 +234,10 @@
   map_id: h5nVaFzkV5VfBpXH7
 - name: Q.Lab Coffee Roasters & Tasting Experience
   high_limit: -3
-  address: 1223 11 Ave SW
+  address: 926 16 Ave SW
   rainy_day: true
   url: https://qlabcoffee.ca
-  paused: true # Get hours and location of new place
+  paused: true # Opens at 8:30 as of 2025-08-23
 - name: Fringe Coffee
   url: https://fringecoffee.ca/
   low_limit: 8
@@ -251,13 +253,7 @@
   high_limit: -5
   rainy_day: true
   url: https://www.instagram.com/ukrainian_coffee_house_calgary/
-  paused: true # Opens at 9AM, 2024-12-12
-- name: Muze Coffeehouse
-  url: TODO
-  high_limit: -3
-  address: TODO
-  rainy_day: true
-  paused: true  # "temporarily closed" in Google as of 2022-11-17
+  paused: true # Opens at 9AM, 2025-08-23
 - low_limit: 10
   url: https://www.calgary.ca/parks/stanley-park.html
   name: Stanley Park Flower Garden
