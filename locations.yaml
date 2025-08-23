@@ -4,15 +4,18 @@
   high_limit: 5
   rainy_day: true
   url: https://la-boulangerie-calgary.com/
+  map_id: kLufjPsSjfk9VTjo6
 - name: Sidewalk Citizen Bakery (Simmons Building)
   high_limit: 5
   url: https://sidewalkcitizenbakery.com/
   rainy_day: true
+  map_id: zkQDG9iBjLQUEVBb8
 - url: https://alforno.ca/
   name: Alforno
   address: 222 7 St SW
   high_limit: 5
   rainy_day: true
+  map_id: 3LWvVnFxGAbQXFgz7
 - url: https://iloveyoucoffeeshop.com/
   name: I Love You Coffee Shop
   address: 348b 14 Ave SW
@@ -24,29 +27,35 @@
   address: 520b 12 Ave SW
   high_limit: 5
   rainy_day: true
+  map_id: Q5WG43ahuDKeKBbk7
 - url: https://www.bayaricacafe.ca/
   name: Baya Rica Cafe
   address: 204 7A Street NE
   high_limit: 5
   rainy_day: true
+  map_id: NzLYbBg2AhvVvFFXA
 - url: https://www.calgaryheritageroastingco.com/
   name: Calgary Heritage Roasting Company
   address: 2020 11 St SE
   high_limit: 5
   rainy_day: true
   paused: true  # Opens 8AM as of 2022-11-17
+  map_id: beuJwSp31itrCEkx7
 - address: 420 2nd Street SW
   high_limit: 0
   name: Monogram Coffee
   url: https://monogramcoffee.com/
   rainy_day: true
+  map_id: 6S3qwrsz8TxtUH539
 - name: Barb Scott Park
   location_hint: by 13th Ave tables
   url: https://www.calgary.ca/parks/barb-scott-park.html
   low_limit: -8
+  map_id: AHXtTWb7rJY17z1T8
 - name: Buckmaster Park
   low_limit: 10
   address: 1629 21 Ave SW
+  map_id: JTR29PVfv4WxXKdLA
 - high_limit: -2
   address: 609 8 Ave SW
   name: Cafe Eight
@@ -58,10 +67,12 @@
   name: Cafe Gravity
   url: https://cafegravity.com/
   rainy_day: true
+  map_id: b16TiFTbg9nTcvCt5
 - high_limit: -15
   address: 1613 9th Street SW
   name: Caffe Beano
   rainy_day: true
+  map_id: ne5TviKRXAn1QQ4b6
 - name: CNIB Fragrant Garden
   address: 10 11A St NE
   low_limit: 10
@@ -79,6 +90,7 @@
 - name: Connaught Park
   low_limit: -5
   url: https://www.calgary.ca/parks/connaught-park.html
+  map_id: xtgELFy8qxzkdKmHA
 - name: Gladstone Pocket Park
   address: TODO
   low_limit: -1
@@ -95,11 +107,13 @@
   address: 1020 2 Ave NW
   low_limit: -5
   url: https://springboardperformance.com/containr
+  map_id: cknToVxDvrgZRcXL8
   paused: true
 - name: East Village Music Pavilion
   url: https://www.evexperience.com/music-pavilion
   low_limit: -5
   rainy_day: true
+  map_id: Q8SJJbfkN54FphRR9
 - name: Delta Garden
   url: https://maps.app.goo.gl/DWjkBCnAkRr7ertk8
   map_id: DWjkBCnAkRr7ertk8
@@ -108,13 +122,16 @@
   address: 227 11th Ave SW
   high_limit: -10
   url: https://www.devillecoffee.ca/calgary-cafes
+  map_id: Jj5GnEitLMr3uS1d8
 - name: Enmax Stage on Prince's Island
   url: https://www.calgary.ca/parks/princes-island-park.html
   low_limit: -5
   rainy_day: true
+  # TODO: need Google map id?
 - name: Gerry Shaw Gardens
   low_limit: 10
   address: Elbow Drive & 30th Ave SW
+  map_id: aRZWmj6DhN7GjX2x9
 - name: Harley Hotchkiss Gardens
   low_limit: -5
   address: 611 4 St SW
@@ -203,6 +220,7 @@
   url: https://www.calgary.ca/parks/rotary-park.html
   name: Rotary Park
   location_hint: Mt Pleasant View Point
+  map_id: WVbDMfqQjMBKpxjRA
 - name: Rundle Ruins
   address: 632 13 Avenue SE
   low_limit: 0
@@ -210,10 +228,12 @@
   url: https://www.calgary.ca/parks/sandy-beach.html
   name: Sandy Beach
   location_hint: beach by footbridge
+  map_id: qtW619kHo7QpNGMKA
 - url: https://maps.app.goo.gl/vmujWbqYDPQcUnxJ8
   map_id: vmujWbqYDPQcUnxJ8
   low_limit: 10
   name: South Mount Royal Park
+  map_id: tC7FJ8dNWzPXvFHx9
 - name: Millenium Park
   url: https://www.calgary.ca/parks/millennium-park.html
   low_limit: 0
