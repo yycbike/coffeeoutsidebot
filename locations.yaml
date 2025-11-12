@@ -147,7 +147,7 @@
   location_hint: walk your bike up
   low_limit: 0
   url: https://www.beltlineyyc.ca/highparkyyc
-  paused: true
+  map_id: S58mPCcyK3vz7upi6
 - name: Horsy Park
   low_limit: 15
   url: https://maps.app.goo.gl/hayER4NPkYTcdiXC8
@@ -191,6 +191,10 @@
   url: https://maps.app.goo.gl/f1WLB7h44cp9n47i6
   map_id: f1WLB7h44cp9n47i6
   address: 703 14 St SE, Calgary, AB T2G 3J9
+- name: Nimmons Park
+  low_limit: 0
+  url: https://maps.app.goo.gl/divbTrdrm3R9cD5S6
+  map_id: divbTrdrm2R9cD5S6
 - url: https://www.calgary.ca/parks/riley-park.html
   low_limit: 0
   name: Patrick Burns Rock Garden at Riley Park
@@ -205,7 +209,9 @@
   low_limit: 0
 - low_limit: 3
   name: Pumphouse Park
-  paused: true
+  url: https://maps.app.goo.gl/gQkLxn4Cy4C1Pzb66
+  map_id: gQkLxn4Cy4C1Pzb66
+  location_hint: Along the river behind Pumphouse Park
 - name: Reader Rock Garden
   low_limit: 10
   url: https://www.calgary.ca/parks/reader-rock-garden.html
