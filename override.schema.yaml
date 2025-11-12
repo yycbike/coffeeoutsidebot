@@ -17,3 +17,6 @@ mapping:
   "map_id":
     desc: "ID for map site (currently Google Maps)"
     type: str
+  "location_hint":
+    desc: "Human readable 'hint' where the meetup is"
+    type: str
