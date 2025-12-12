@@ -4,6 +4,7 @@ require "test_helper"
 
 class CoffeeOutsideTest < Minitest::Test
   include CoffeeOutside
+
   def test_rainy_day_location
     loc = Location.new("name" => "test", "rainy_day" => true)
     fc = Minitest::Mock.new
