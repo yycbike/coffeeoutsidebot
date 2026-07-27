@@ -53,8 +53,10 @@ module CoffeeOutside
     }
 
     CoffeeOutside::Dispatchers.constants.each do |d|
-      dispatch.merge!(config.dispatchers[d.to_s]) if config.dispatchers[d.to_s]
-      ::CoffeeOutside::Dispatchers.const_get(d).new(dispatch).notify
+      # Get dispatcher info from config.yaml when lowercase
+      dispatcher_config = config.dispatchers&.fetch(d.to_s.downcase, nil) || config.dispatchers&.fetch(d.to_s, nil) || {}
+      params = dispatch.merge(dispatcher_config)
+      ::CoffeeOutside::Dispatchers.const_get(d).new(params).notify
     end
   end
 end

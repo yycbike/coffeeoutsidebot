@@ -1,10 +1,10 @@
 production: false
 dispatchers:
-  service:
-    consumer_secret: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-    consumer_key: xxxxxxxxxxxxxxxxxxxxxxxxxx
+  mastodon:
     token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-    token_secret: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  bluesky:
+    identifier: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    password: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 openweathermap:
   city_id: 5913490
   api_key: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx

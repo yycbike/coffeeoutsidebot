@@ -12,6 +12,7 @@ bin/setup
 coffeeoutside.gemspec
 config.example.yaml
 lib/coffeeoutside.rb
+lib/coffeeoutside/dispatchers/bluesky.rb
 lib/coffeeoutside/dispatchers/dispatcher.rb
 lib/coffeeoutside/dispatchers/ical.rb
 lib/coffeeoutside/dispatchers/json.rb
