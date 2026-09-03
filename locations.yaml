@@ -330,3 +330,9 @@
   url: https://www.calgary.ca/parks/lois-szabo-commons.html
   low_limit: 8
   address: 936 16 Ave SW
+- name: YYC Flowers and Coffee Corner
+  address: 755 5 Ave SW
+  high_limit: 15
+  rainy_day: true
+  url: https://yycflowerscoffee.com/
+  map_id: 5AtbeM6CBYqBKr7T8
